@@ -1,0 +1,84 @@
+\documentclass{article}
+\usepackage{geometry}
+\geometry{a4paper,margin=2cm}
+
+\usepackage{wrapfig}
+
+\everymath{\displaystyle}
+\renewcommand{\epsilon}{\varepsilon}
+%\renewcommand{\epsilon}{\mathchar"122}
+
+\usepackage{esvect}
+\usepackage{wrapfig}
+\usepackage{mathrsfs}
+
+\usepackage{physics}
+
+% (?<!\\Bigg)\)\_
+% <(.*?)>
+% \_\{(?=em)(.*?)\}
+% \\fbox{\$$((.|\n)*?)\$$}
+% : ?\\\\ ?\n\$$((.(?!(\\mathcolorbox))|\n)*?)\$$ ?\.? ?\n?\\\\
+
+\usepackage{xcolor}
+\usepackage{soul}
+\newcommand{\mathcolorbox}[2]{\colorbox{#1}{$$#2$$}}
+
+\DeclareSymbolFont{legacyletters}{OML}{cmm}{m}{it}
+\let\j\relax
+\DeclareMathSymbol{\j}{\mathord}{legacyletters}{"7C}
+
+
+\newcommand{\oneast}{\bigskip\par{\large\centerline{*\medskip}}\par}
+
+
+\usepackage[T1]{fontenc}
+%% \usepackage[french]{babel}
+\usepackage{epsfig}
+\usepackage{graphicx}
+\usepackage{amsmath}
+%\setlength{\mathindent}{0cm}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{float}
+\usepackage{esint}
+\usepackage{enumitem}
+\usepackage{frcursive}
+%\usepackage{fourier}
+%% \usepackage{amsrefs}
+\reversemarginpar
+\newcommand{\asterism}{%
+\leavevmode\marginpar{\makebox[10em][c]{$$10^{500}$$\makebox[1em][c]{%
+\makebox[0pt][c]{\raisebox{-0.3ex}{\smash{$$\star\star$$}}}%
+\makebox[0pt][c]{\raisebox{0.8ex}{\smash{$$\star$$}}}%
+}}}}
+
+\setlength\parindent{0pt}
+
+\let\oldiint\iint
+\renewcommand{\iint}{\oldiint\limits}
+
+\let\oldiiint\iiint
+\renewcommand{\iiint}{\oldiiint\limits}
+
+\let\oldoint\oint
+\renewcommand{\oint}{\oldoint\limits}
+
+\let\oldoiint\oiint
+\renewcommand{\oiint}{\oldoiint\limits}
+
+
+\renewcommand\overrightarrow{\vv}
+\let\oldexp\exp
+\renewcommand{\exp}[1]{\oldexp\left(#1\right)}
+
+\newcommand{\ext}{\text{ext}}
+\newcommand{\cste}{\text{cste}}
+
+%\renewcommand{\div}{\mathrm{div}}
+\let\div\relax
+\DeclareMathOperator{\div}{\mathrm{div}}
+\let\rot\relax
+\DeclareMathOperator{\rot}{\overrightarrow{\mathrm{rot}}}
+\let\grad\relax
+\DeclareMathOperator{\grad}{\overrightarrow{\mathrm{grad}}}

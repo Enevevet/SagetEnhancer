@@ -1,0 +1,21 @@
+{
+  "name": "sagetenhancer",
+  "version": "1.0.0",
+  "description": "Enhance my physics teacher LaTeX documents",
+  "main": "index.js",
+  "scripts": {
+    "test": "bruh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "SagetEnhancer"
+  },
+  "keywords": [
+    "LaTeX"
+  ],
+  "author": "Enevevet",
+  "license": "ISC",
+  "dependencies": {
+    "fs": "0.0.1-security"
+  }
+}
