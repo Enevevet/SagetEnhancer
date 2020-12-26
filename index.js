@@ -43,6 +43,7 @@ fs.readdir("./tex_files/", (err, files) => {
             p2 = p2.replace(/(?<!\\[a-z]*\[[a-z]*)\]/gi, "\\right]") // JPP, pire arnaqueur du monde
             p2 = p2.replace(/(?<!\\([a-z]|[A-Z])*)d/gm, "\\mathrm{d}") //MATHRM D PTN
             p2 = p2.replace(/(?<!\\(([a-z]|[A-Z])*|(mathcal{)))D/gm, "\\mathrm{D}")
+            p2 = p2.replace(/(?<!(\\o?i{1,3}nt|\\sum|\\product))_{(.[^}].*?)}/g, "_{\\mathrm{$2}}")
             return `$${p2}$`;
         }
         par = par.replace(/(\$)((.|\r?\n?)*?)(\$)/gm, replacer)

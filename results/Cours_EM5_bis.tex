@@ -228,10 +228,10 @@ Chacun des circuits créé un champ magnétique $\overrightarrow{B}_{i}$ avec $i
 On introduit ici un coefficient caractéristique qui ne dépend que la
 géométrie du circuit appelé coefficient d'inductance propre ou d'auto-induction $L_{i}$  positif défini pour chacun des circuits par : \\
 \centerline{\mathcolorbox{gray!20}{\Phi_{1\rightarrow 1}(t) = L_{1}i_{1}(t)}} et
-\fbox{$\Phi_{2\rightarrow 2}\left(t\right) = L_{2}i_{2}\left(t\right)$}. \\
-$\Phi_{1\rightarrow 1}\left(t\right)$ désigne le flux du champ magnétique
+\fbox{$\Phi_{\mathrm{2\rightarrow 2}}\left(t\right) = L_{2}i_{2}\left(t\right)$}. \\
+$\Phi_{\mathrm{1\rightarrow 1}}\left(t\right)$ désigne le flux du champ magnétique
 $\overrightarrow{B}_{1}$ à travers le circuit $\mathcal{C}_{1}$. \\
-$\Phi_{2\rightarrow 2}\left(t\right)$ désigne le flux du champ magnétique
+$\Phi_{\mathrm{2\rightarrow 2}}\left(t\right)$ désigne le flux du champ magnétique
 $\overrightarrow{B}_{2}$ à travers le circuit $\mathcal{C}_{2}$. \\
 Notons que ces définitions sont encore licites si les intensités des
 courants sont constantes\footnote{En d'autres termes, on peut les
@@ -247,21 +247,21 @@ caractéristiques des interactions entre ces deux circuits (chacun
 des champs magnétiques propres contribuent au flux du champ
 magnétique de l'autre circuit) par : \\
 \centerline{\mathcolorbox{gray!20}{\Phi_{1\rightarrow 2}(t) = M_{12}i_{1}(t)}} et
-\fbox{$\Phi_{2\rightarrow 1}\left(t\right) = M_{21}i_{2}\left(t\right)$}. \\
-$\Phi_{1\rightarrow 2}\left(t\right)$ désigne le flux du champ magnétique
+\fbox{$\Phi_{\mathrm{2\rightarrow 1}}\left(t\right) = M_{\mathrm{21}}i_{2}\left(t\right)$}. \\
+$\Phi_{\mathrm{1\rightarrow 2}}\left(t\right)$ désigne le flux du champ magnétique
 $\overrightarrow{B}_{1}$ à travers le circuit $\mathcal{C}_{2}$. \\
-$\Phi_{2\rightarrow 1}\left(t\right)$ désigne le flux du champ magnétique
+$\Phi_{\mathrm{2\rightarrow 1}}\left(t\right)$ désigne le flux du champ magnétique
 $\overrightarrow{B}_{2}$ à travers le circuit $\mathcal{C}_{1}$. \\
 Notons que ces définitions sont encore licites si les intensités des
 courants sont constantes. \\
 Contrairement aux coefficients $L_{1}$ et $L_{2}$, les coefficients
-$M_{12}$ et $M_{21}$ dépendent de l'orientation relative des
+$M_{\mathrm{12}}$ et $M_{\mathrm{21}}$ dépendent de l'orientation relative des
 circuits : \textbf{ces coefficients sont algébriques !} \\
 Notons enfin qu'on peut montrer\footnote{J'ai renoncé à la
 démonstration en 2014, i.e. au changement de programme...} (à l'aide
-des potentiels vecteurs) que les coefficients $M_{12}$ et $M_{21}$
+des potentiels vecteurs) que les coefficients $M_{\mathrm{12}}$ et $M_{\mathrm{21}}$
 sont égaux. Par la suite,
-on posera : \fbox{$M_{12} =M_{21} =M$}. \\
+on posera : \fbox{$M_{\mathrm{12}} =M_{\mathrm{21}} =M$}. \\
 Les coefficients $L_{1}$, $L_{2}$ et $M$ sont appelés coefficients
 de Neumann; leur unité SI est le henry (symbole : H).
 
@@ -269,7 +269,7 @@ de Neumann; leur unité SI est le henry (symbole : H).
 \underline{Prérequis :} le flux est additif : si la
 distribution de courant est un circuit formé par $N$ spires alors le
 flux à travers le circuit est $N$ fois le flux à travers une spire :
-$\Phi\left(t\right) = N\Phi_{1\,spire}$.
+$\Phi\left(t\right) = N\Phi_{\mathrm{1\,spire}}$.
 
 \begin{itemize}
 \item On assimile le long solénoïde (noté solénoïde "1") à un
@@ -283,8 +283,8 @@ contour est orienté via la règle de la main droite comme étant :
 $\overrightarrow{\mathrm{d}S} =\mathrm{d}S\overrightarrow{u}_{z}$. \\
 Le calcul du flux de $\overrightarrow{B}_{1}$ à travers une spire
 est  ($\overrightarrow{B}_{1}$ est uniforme et $S$ est la surface
-d'une spire) : $\Phi_{1\longrightarrow 1 spire} =
-\mu_{0}\frac{NSI}{\ell}$. Or, $\Phi_{1}\left(t\right) = N\Phi_{1\,spire}$, donc
+d'une spire) : $\Phi_{\mathrm{1\longrightarrow 1 spire}} =
+\mu_{0}\frac{NSI}{\ell}$. Or, $\Phi_{1}\left(t\right) = N\Phi_{\mathrm{1\,spire}}$, donc
 le flux du champ magnétique créé par le solénoïde à travers lui-même
 est : $\Phi_{1} = \mu_{0}\frac{N^{2}SI}{\ell}$.\\
 Par définition de l'inductance propre, on écrit : $\Phi_{1}=
@@ -295,9 +295,9 @@ A.N.: \underline{$L_{1} = 10,0$ mH}.
 \item Orientons positivement chaque contour du petit solé-noïde (nommé solénoïde 2) selon l'intensité du courant $I_{2}$,
 chaque intégrande de surface ouverte délimitée par un contour est
 orienté via la règle de la main droite comme étant :
-$\overrightarrow{\mathrm{d}S}_{2} =\mathrm{d}S_{2}\overrightarrow{u}_{z2}$. \\
+$\overrightarrow{\mathrm{d}S}_{2} =\mathrm{d}S_{2}\overrightarrow{u}_{\mathrm{z2}}$. \\
 Pour obtenir le coefficient d'inductance mutuelle, il faut jouer sur
-la propriété que $M_{12} = M_{12}$. \\
+la propriété que $M_{\mathrm{12}} = M_{\mathrm{12}}$. \\
 En effet, pour le petit solénoïde, difficile d'utiliser le modèle du
 solénoïde de longueur infinie...En outre le calcul du flux du champ
 créé par ce dernier à travers le grand solénoïde paraît délicat. En
@@ -308,11 +308,11 @@ Le calcul du flux de $\overrightarrow{B}_{1}$ à travers une spire du
 petit solénoïde est  ($\overrightarrow{B}_{1}$ est uniforme et
 $S_{2}$ est la surface d'une spire) : $\Phi_{1\longrightarrow 1
 spire\, \mathrm{d}e\,2} = \mu_{0}\frac{NI}{\ell}S_{2}\cos\theta$. Or,
-$\Phi_{1\longrightarrow 2}\left(t\right) = N_{2}\Phi_{1\longrightarrow 1
+$\Phi_{\mathrm{1\longrightarrow 2}}\left(t\right) = N_{2}\Phi_{1\longrightarrow 1
 spire\, \mathrm{d}e\,2}$, donc le flux du champ magnétique créé par le grand
-solénoïde à travers le petit solénoïde est : $\Phi_{1\longrightarrow 2}\left(t\right) = \mu_{0}\frac{NN_{2}S_{2}I}{\ell}\cos\theta$.\\
+solénoïde à travers le petit solénoïde est : $\Phi_{\mathrm{1\longrightarrow 2}}\left(t\right) = \mu_{0}\frac{NN_{2}S_{2}I}{\ell}\cos\theta$.\\
 Par définition du coefficient d'inductance mutuelle, on écrit :
-$\Phi_{1\longrightarrow 2}\left(t\right)
+$\Phi_{\mathrm{1\longrightarrow 2}}\left(t\right)
 =\mu_{0}\frac{NN_{2}S_{2}I}{\ell}\cos\theta = MI$, donc : \fbox{$M =
 \mu_{0}\frac{NN_{2}S_{2}}{\ell}\cos\theta$}, grandeur qui ne dépend
 que de la géométrie des solénoïdes et de leur position
@@ -339,11 +339,11 @@ On applique la loi de Faraday au niveau de chacune des deux bobines
 sièges d'un phénomène d'induction (couplage avec le champ de l'autre
 bobine) et d'auto-induction (induction à travers le circuit
 inducteur lui-même). On a : $e_{1} = -\frac{\mathrm{d}\Phi_{1}}{\mathrm{d}t}$ avec
-$\Phi_{1} = \Phi_{1 \rightarrow 1}+ \Phi_{2 \rightarrow 1}$ avec
-$\Phi_{1 \rightarrow 1} = L_{1}i_{1}$ et $\Phi_{2 \rightarrow 1} =
+$\Phi_{1} = \Phi_{\mathrm{1 \rightarrow 1}}+ \Phi_{\mathrm{2 \rightarrow 1}}$ avec
+$\Phi_{\mathrm{1 \rightarrow 1}} = L_{1}i_{1}$ et $\Phi_{\mathrm{2 \rightarrow 1}} =
 Mi_{2}$ ; $e_{2} = -\frac{\mathrm{d}\Phi_{2}}{\mathrm{d}t}$ avec $\Phi_{2} = \Phi_{2
-\rightarrow 2}+ \Phi_{1 \rightarrow 2}$ avec $\Phi_{2 \rightarrow 2}
-= L_{2}i_{2}$ et $\Phi_{1 \rightarrow 2} = Mi_{1}$.
+\rightarrow 2}+ \Phi_{\mathrm{1 \rightarrow 2}}$ avec $\Phi_{\mathrm{2 \rightarrow 2}}
+= L_{2}i_{2}$ et $\Phi_{\mathrm{1 \rightarrow 2}} = Mi_{1}$.
 \\
 On a besoin du caractère rigide des bobines (sinon $L_{1}$, $L_{2}$
 et $M$ dépendraient du temps) pour écrire : $e_{1} =
@@ -450,9 +450,9 @@ On écrit :
 \end{eqnarray}
 Le théorème de composition newtonienne des vitesses entre (R) et
 (R') donne (Cf. M1 avec ici $\overrightarrow{v} =
-\overrightarrow{v}_{/R}\left(M\right)$, $\overrightarrow{v'} =
-\overrightarrow{v}_{/R'}\left(M\right)$, $\overrightarrow{v}_{e} =
-\overrightarrow{v}_{/R}\left(O'\right)$) : $\overrightarrow{v} =
+\overrightarrow{v}_{\mathrm{/R}}\left(M\right)$, $\overrightarrow{v'} =
+\overrightarrow{v}_{\mathrm{/R'}}\left(M\right)$, $\overrightarrow{v}_{e} =
+\overrightarrow{v}_{\mathrm{/R}}\left(O'\right)$) : $\overrightarrow{v} =
 \overrightarrow{v'}+\overrightarrow{v}_{e}$. \\
 Ici $\overrightarrow{v'} = \overrightarrow{0}$. \\
 Dans l'ARQS magnétique : $\overrightarrow{B} = \overrightarrow{B'}$
@@ -595,12 +595,12 @@ barre : \fbox{$v\left(t\right) = v_{0}e^{-\frac{t}{\tau}}$}.
 On vérifie le bilan de puissance électromécanique à partir de
 l'exemple des rails de Laplace. \\
 La puissance fournie par la fem induite (on travaille en convention
-générateur) est : $\mathcal{P}_{fem} =
+générateur) est : $\mathcal{P}_{\mathrm{fem}} =
 e\left(t\right)i\left(t\right) = \frac{e^{2}}{R} = \frac{v^{2}\ell^{2}B^{2}}{R}$. \\
 La puissance fournie par les actions de Laplace est :
-$\mathcal{P}_{Laplace} = \overrightarrow{F}_{L}.\overrightarrow{v} =
+$\mathcal{P}_{\mathrm{Laplace}} = \overrightarrow{F}_{L}.\overrightarrow{v} =
 i\ell B v = \frac{e}{R}B\ell v = -\frac{v^{2}\ell^{2} B^{2}}{R}$. \\
-On a bien : $\mathcal{P}_{fem}+\mathcal{P}_{Laplace} = 0$.
+On a bien : $\mathcal{P}_{\mathrm{fem}}+\mathcal{P}_{\mathrm{Laplace}} = 0$.
 
 \subsection*{10. Principe des moteurs électriques}
 \subsubsection*{a) Moteurs linéaires (machines à courant continu) à partir des rails de Laplace}
@@ -634,10 +634,10 @@ aboutit à
 l'équation : $\frac{\mathrm{d}v}{\mathrm{d}t}+\frac{v}{\tau} = \frac{B\ell}{mR}E$. \\
 La résolution de cette équation différentielle linéaire du premier
 ordre à coefficients constants donne : $v\left(t\right) = \tau\frac{B\ell}{mR}E
-+Ae^{-\frac{t}{\tau}}$. On pose $v_{lim} = \frac{E}{B\ell}$. \\
++Ae^{-\frac{t}{\tau}}$. On pose $v_{\mathrm{lim}} = \frac{E}{B\ell}$. \\
 Avec la CI, $v\left(t=0\right) = 0$, il vient : \fbox{$v\left(t\right) =
-v_{lim}\left[1-e^{-\frac{t}{\tau}}\right]$}. \\
-Lorsque $t \rightarrow +\infty$, $v \rightarrow v_{lim}$ ; une fois
+v_{\mathrm{lim}}\left[1-e^{-\frac{t}{\tau}}\right]$}. \\
+Lorsque $t \rightarrow +\infty$, $v \rightarrow v_{\mathrm{lim}}$ ; une fois
 le régime permanent atteint, le barreau est en mouvement de
 translation rectiligne uniforme. \\
 \underline{Un peu de physique avec "les mains" :} \\
@@ -654,19 +654,19 @@ qui met en mouvement un barreau : c'est le principe d'un moteur.\\
 Reprenons notre raisonnement ... Mais le déplacement de la barre
 produit des variations du flux du champ magnétique à travers le
 circuit initiant l'apparition d'une fem induite et d'un courant
-induit d'intensité : $i_{in\mathrm{d}uit} =
+induit d'intensité : $i_{\mathrm{in\mathrm{d}}uit} =
 \frac{e}{R} = -\frac{vB\ell}{R}$. \\
-D'après la loi de modération de Lenz, $i_{in\mathrm{d}uit}$ tend à s'opposer
+D'après la loi de modération de Lenz, $i_{\mathrm{in\mathrm{d}}uit}$ tend à s'opposer
 aux causes qui lui ont donné naissance : $\mathrm{d}\Phi = B\ell v \mathrm{d}t >0$,
-donc $e\left(t\right) < 0$, donc $i_{in\mathrm{d}uit} < 0$ : $i_{in\mathrm{d}uit}$ s'oppose ici à
-$I_{0}$. Ceci perdure jusqu'à une vitesse acquise $v_{lim}$ par le
-barreau pour laquelle $i_{in\mathrm{d}uit}$ compense $I_{0}$ : on a alors
-$I_{0}-\frac{v_{lim}B\ell}{R}=0$, soit : $v_{lim} = \frac{RI_{0}}{B
+donc $e\left(t\right) < 0$, donc $i_{\mathrm{in\mathrm{d}}uit} < 0$ : $i_{\mathrm{in\mathrm{d}}uit}$ s'oppose ici à
+$I_{0}$. Ceci perdure jusqu'à une vitesse acquise $v_{\mathrm{lim}}$ par le
+barreau pour laquelle $i_{\mathrm{in\mathrm{d}}uit}$ compense $I_{0}$ : on a alors
+$I_{0}-\frac{v_{\mathrm{lim}}B\ell}{R}=0$, soit : $v_{\mathrm{lim}} = \frac{RI_{0}}{B
 \ell} = \frac{E}{B \ell}$.\\
 
 \subsubsection*{b) Machines rotatives à courant continu}
 On véifie ici le bilan de transduction électromécanique ; on calcule
-$\mathcal{P}_{fem} = e i = -\Phi_{0}\omega i$ et la puissance
+$\mathcal{P}_{\mathrm{fem}} = e i = -\Phi_{0}\omega i$ et la puissance
 fournie par les actions de Laplace\footnote{Rappels de MPSI et/ou de
 SI : pour calculer le travail d'une force on écrit: $\delta W
 =\overrightarrow{F}.\overrightarrow{\mathrm{d}\ell}$ ; pour des actions qui
@@ -676,10 +676,10 @@ matériel en mouvement à la vitesse angulaire
 $\overrightarrow{\omega}$ autour d'un axe de rotation, on écrit :
 $\delta W = \mathcal{P}\mathrm{d}t =
 \overrightarrow{\Gamma}.\overrightarrow{\omega}\mathrm{d}t$.}
-$\mathcal{P}_{Laplace} =
+$\mathcal{P}_{\mathrm{Laplace}} =
 \overrightarrow{\Gamma}.\overrightarrow{\omega} = \Gamma \omega =
 \Phi_{0}\omega i$. \\
-Au final, $\mathcal{P}_{fem}+\mathcal{P}_{Laplace}=0$.
+Au final, $\mathcal{P}_{\mathrm{fem}}+\mathcal{P}_{\mathrm{Laplace}}=0$.
 
 \subsection*{III. Cadre d'étude plus général}
 \subsection*{1. Position du problème et expression de la f.e.m. induite
@@ -688,7 +688,7 @@ Dans le cas général, on définit la fem à partir du travail de la
 charge (subissant la force de Lorentz) le long du contour $\Gamma$ :
 $e\left(t\right) = \frac{\delta W\left(\overrightarrow{F}\right)}{q}$, soit
 ($\overrightarrow{v}_{e} =
-\overrightarrow{v}_{/R}\left(M\right)=\overrightarrow{v}$ la vitesse de la
+\overrightarrow{v}_{\mathrm{/R}}\left(M\right)=\overrightarrow{v}$ la vitesse de la
 charge $q$ dans (R) ; la charge est au repos dans le référentiel
 relatif (R') : $\overrightarrow{v}'=\overrightarrow{0}$):
 \\
