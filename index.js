@@ -42,6 +42,9 @@ fs.readdir("./tex_files/", (err, files) => {
         }
         par = par.replace(/(\$)((.|\r?\n?)*?)(\$)/gm, replacer)
 
+        par = par.replace(/<</g, "\\ll")
+        par = par.replace(/>>/g, "\\gg")
+
         //Écriture dans le fichier
         fs.writeFile(`./results/${file}`, par, (err) => {
             if (err) throw err;
