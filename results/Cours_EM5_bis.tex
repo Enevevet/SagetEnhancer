@@ -17,8 +17,8 @@
 % (?<!\\Bigg)\)\_
 % <(.*?)>
 % \_\{(?=em)(.*?)\}
-% \\fbox{\$\left(\left(.|\n\right)*?\right)\$}
-%Â : ?\\\\ ?\n\$\left(\left(.\left(?!\left(\\mathcolorbox\right)\right)|\n\right)*?\right)\$ ?\.? ?\n?\\\\
+% \\fbox{\$\left((.|\n\right)*?)\$}
+%Â : ?\\\\ ?\n\$\left((.(?!(\\mathcolorbox\right))|\n)*?)\$ ?\.? ?\n?\\\\
 
 \usepackage{xcolor}
 \usepackage{soul}
@@ -106,7 +106,7 @@ d'induction est l'équation de Maxwell-Faraday (M.F.): \\
 Physiquement, cette relation exprime que les variations temporelles
 du champ magnétique sont sources d'un champ électrique dit induit.
 \\
-Comme $\overrightarrow{B}\left(M,t\right)$ dérive d'un potentiel vecteur,
+Comme $\overrightarrow{B}(M,t)$ dérive d'un potentiel vecteur,
 l'équation (M.F.) devient : $\rot \overrightarrow{E}=
 -\frac{\partial \rot \overrightarrow{A}}{\partial
 t}$. \\
@@ -115,7 +115,7 @@ exploitant la linéarité de l'opérateur rotationnel, il vient :
 $\rot \left(\overrightarrow{E}+\frac{\partial
 \overrightarrow{A}}{\partial t}\right) = \overrightarrow{0}$. \\
 Il existe un champ scalaire appelé potentiel scalaire généralisé
-$V\left(M,t\right)$ tel que : $\overrightarrow{E}+\frac{\partial
+$V(M,t)$ tel que : $\overrightarrow{E}+\frac{\partial
 \overrightarrow{A}}{\partial t} = -\grad V$, ou
 encore (en rajoutant les fioritures
 d'usage) : \\
@@ -123,8 +123,8 @@ d'usage) : \\
 \overrightarrow{A}}{\partial t}(M,t) -\overrightarrow{grad}V(M,t)}}. \\
 On appelle champ électromoteur de Neumann la contribution du champ
 électrique à circulation non conservative, i.e. :
-\fbox{$\overrightarrow{E}_{m}\left(M,t\right) = -\frac{\partial
-\overrightarrow{A}}{\partial t}\left(M,t\right)$}.
+\fbox{$\overrightarrow{E}_{m}(M,t) = -\frac{\partial
+\overrightarrow{A}}{\partial t}(M,t)$}.
 
 
 \begin{wrapfigure}{r}{0.25\textwidth}
@@ -148,10 +148,10 @@ $\Gamma$ : \\
 Soit un circuit filiforme, fixe, indéformable dont le
 contour $\left(\Gamma\right)$ a été préalablement orienté sur lequel s'appuie
 une surface ouverte (Cf. \ref{Fig.1}). Considérons un intégrande
-$\overrightarrow{\mathrm{d}S}\left(P\right)$ de cette surface orienté selon la règle
+$\overrightarrow{\mathrm{d}S}(P)$ de cette surface orienté selon la règle
 de la main droite. \\
 Multiplions scalairement $\rot \overrightarrow{E}$
-par $\overrightarrow{\mathrm{d}S}\left(P\right)$ puis intégrons sur toute la surface
+par $\overrightarrow{\mathrm{d}S}(P)$ puis intégrons sur toute la surface
 ouverte $S$ ; en vertu de l'équation de Maxwell-Faraday, on a :
 \begin{eqnarray}\label{Eq.1}
 \iint_{P\in S}
@@ -174,9 +174,9 @@ t}$ et l'intégrale double. Il vient :
 = - \frac{d}{dt}\iint_{P \in
 S}\overrightarrow{B}(P,t).\overrightarrow{dS}(P).
 \end{eqnarray}
-Or, $\phi\left(t\right) = \iint_{P\in
-S}\overrightarrow{B}\left(P,t\right).\overrightarrow{\mathrm{d}S}\left(P\right)$ est le flux du
-champ magnétique à travers $\left(S\right)$ (rappelons que ce flux est
+Or, $\phi(t) = \iint_{P\in
+S}\overrightarrow{B}(P,t).\overrightarrow{\mathrm{d}S}(P)$ est le flux du
+champ magnétique à travers $(S)$ (rappelons que ce flux est
 indépendant de la forme de la surface ouverte s'appuyant sur
 $\Gamma$). On en déduit l'expression de la loi de Faraday : \\
 \centerline{\mathcolorbox{gray!20}{e(t) = -\frac{d\phi}{dt}(t)}}.
@@ -202,11 +202,11 @@ spire.}\label{Fig.2}
 
 \item Le flux du champ magnétique est (la surface ouverte choisi est le disque de rayon $r$ délimité par $\Gamma$ ; d'après le sens positif
 choisi, $\overrightarrow{\mathrm{d}S}=\mathrm{d}S\overrightarrow{u}_{z}$ ; le champ
-magnétique est uniforme MAIS dépendant du temps): $\phi\left(t\right) =
-\iint_{P\in S} \overrightarrow{B}.\overrightarrow{\mathrm{d}S}\left(P\right) = B_{0}\cos
+magnétique est uniforme MAIS dépendant du temps): $\phi(t) =
+\iint_{P\in S} \overrightarrow{B}.\overrightarrow{\mathrm{d}S}(P) = B_{0}\cos
 \omega t \pi r^{2}$. \\
-Conformément à la loi de Faraday, $e\left(t\right) = -\frac{\mathrm{d}\Phi}{\mathrm{d}t} =
-B_{0}\omega \sin\omega t \pi r^{2}$, puis $i\left(t\right) = \frac{e}{R} =
+Conformément à la loi de Faraday, $e(t) = -\frac{\mathrm{d}\Phi}{\mathrm{d}t} =
+B_{0}\omega \sin\omega t \pi r^{2}$, puis $i(t) = \frac{e}{R} =
 \frac{B_{0}\omega \sin\omega t \pi r^{2}}{R}$.
 \end{enumerate}
 
@@ -228,16 +228,16 @@ Considérons deux surfaces ouvertes $S_{1}$ et $S_{2}$ s'appuyant sur
 chacun des circuits (les intégrandes de surface sont orientés à
 partir des orientations des
 circuits via la sempiternelle règle de la main droite). \\
-Ces circuits sont parcourus par des courants d'intensité $i_{1}\left(t\right)$
-et $i_{2}\left(t\right)$.
+Ces circuits sont parcourus par des courants d'intensité $i_{1}(t)$
+et $i_{2}(t)$.
 Chacun des circuits créé un champ magnétique $\overrightarrow{B}_{i}$ avec $i=1,2$. \\
 On introduit ici un coefficient caractéristique qui ne dépend que la
 géométrie du circuit appelé coefficient d'inductance propre ou d'auto-induction $L_{i}$  positif défini pour chacun des circuits par : \\
 \centerline{\mathcolorbox{gray!20}{\Phi_{1\rightarrow 1}(t) = L_{1}i_{1}(t)}} et
-\fbox{$\Phi_{\mathrm{2\rightarrow 2}}\left(t\right) = L_{2}i_{2}\left(t\right)$}. \\
-$\Phi_{\mathrm{1\rightarrow 1}}\left(t\right)$ désigne le flux du champ magnétique
+\fbox{$\Phi_{\mathrm{2\rightarrow 2}}(t) = L_{2}i_{2}(t)$}. \\
+$\Phi_{\mathrm{1\rightarrow 1}}(t)$ désigne le flux du champ magnétique
 $\overrightarrow{B}_{1}$ à travers le circuit $\mathcal{C}_{1}$. \\
-$\Phi_{\mathrm{2\rightarrow 2}}\left(t\right)$ désigne le flux du champ magnétique
+$\Phi_{\mathrm{2\rightarrow 2}}(t)$ désigne le flux du champ magnétique
 $\overrightarrow{B}_{2}$ à travers le circuit $\mathcal{C}_{2}$. \\
 Notons que ces définitions sont encore licites si les intensités des
 courants sont constantes\footnote{En d'autres termes, on peut les
@@ -253,10 +253,10 @@ caractéristiques des interactions entre ces deux circuits (chacun
 des champs magnétiques propres contribuent au flux du champ
 magnétique de l'autre circuit) par : \\
 \centerline{\mathcolorbox{gray!20}{\Phi_{1\rightarrow 2}(t) = M_{12}i_{1}(t)}} et
-\fbox{$\Phi_{\mathrm{2\rightarrow 1}}\left(t\right) = M_{\mathrm{21}}i_{2}\left(t\right)$}. \\
-$\Phi_{\mathrm{1\rightarrow 2}}\left(t\right)$ désigne le flux du champ magnétique
+\fbox{$\Phi_{\mathrm{2\rightarrow 1}}(t) = M_{\mathrm{21}}i_{2}(t)$}. \\
+$\Phi_{\mathrm{1\rightarrow 2}}(t)$ désigne le flux du champ magnétique
 $\overrightarrow{B}_{1}$ à travers le circuit $\mathcal{C}_{2}$. \\
-$\Phi_{\mathrm{2\rightarrow 1}}\left(t\right)$ désigne le flux du champ magnétique
+$\Phi_{\mathrm{2\rightarrow 1}}(t)$ désigne le flux du champ magnétique
 $\overrightarrow{B}_{2}$ à travers le circuit $\mathcal{C}_{1}$. \\
 Notons que ces définitions sont encore licites si les intensités des
 courants sont constantes. \\
@@ -275,7 +275,7 @@ de Neumann; leur unité SI est le henry (symbole : H).
 \underline{Prérequis :} le flux est additif : si la
 distribution de courant est un circuit formé par $N$ spires alors le
 flux à travers le circuit est $N$ fois le flux à travers une spire :
-$\Phi\left(t\right) = N\Phi_{\mathrm{1\,spire}}$.
+$\Phi(t) = N\Phi_{\mathrm{1\,spire}}$.
 
 \begin{itemize}
 \item On assimile le long solénoïde (noté solénoïde "1") à un
@@ -290,7 +290,7 @@ $\overrightarrow{\mathrm{d}S} =\mathrm{d}S\overrightarrow{u}_{z}$. \\
 Le calcul du flux de $\overrightarrow{B}_{1}$ à travers une spire
 est  ($\overrightarrow{B}_{1}$ est uniforme et $S$ est la surface
 d'une spire) : $\Phi_{\mathrm{1\longrightarrow 1 spire}} =
-\mu_{0}\frac{NSI}{\ell}$. Or, $\Phi_{1}\left(t\right) = N\Phi_{\mathrm{1\,spire}}$, donc
+\mu_{0}\frac{NSI}{\ell}$. Or, $\Phi_{1}(t) = N\Phi_{\mathrm{1\,spire}}$, donc
 le flux du champ magnétique créé par le solénoïde à travers lui-même
 est : $\Phi_{1} = \mu_{0}\frac{N^{2}SI}{\ell}$.\\
 Par définition de l'inductance propre, on écrit : $\Phi_{1}=
@@ -314,11 +314,11 @@ Le calcul du flux de $\overrightarrow{B}_{1}$ à travers une spire du
 petit solénoïde est  ($\overrightarrow{B}_{1}$ est uniforme et
 $S_{2}$ est la surface d'une spire) : $\Phi_{1\longrightarrow 1
 spire\, \mathrm{d}e\,2} = \mu_{0}\frac{NI}{\ell}S_{2}\cos\theta$. Or,
-$\Phi_{\mathrm{1\longrightarrow 2}}\left(t\right) = N_{2}\Phi_{1\longrightarrow 1
+$\Phi_{\mathrm{1\longrightarrow 2}}(t) = N_{2}\Phi_{1\longrightarrow 1
 spire\, \mathrm{d}e\,2}$, donc le flux du champ magnétique créé par le grand
-solénoïde à travers le petit solénoïde est : $\Phi_{\mathrm{1\longrightarrow 2}}\left(t\right) = \mu_{0}\frac{NN_{2}S_{2}I}{\ell}\cos\theta$.\\
+solénoïde à travers le petit solénoïde est : $\Phi_{\mathrm{1\longrightarrow 2}}(t) = \mu_{0}\frac{NN_{2}S_{2}I}{\ell}\cos\theta$.\\
 Par définition du coefficient d'inductance mutuelle, on écrit :
-$\Phi_{\mathrm{1\longrightarrow 2}}\left(t\right)
+$\Phi_{\mathrm{1\longrightarrow 2}}(t)
 =\mu_{0}\frac{NN_{2}S_{2}I}{\ell}\cos\theta = MI$, donc : \fbox{$M =
 \mu_{0}\frac{NN_{2}S_{2}}{\ell}\cos\theta$}, grandeur qui ne dépend
 que de la géométrie des solénoïdes et de leur position
@@ -337,7 +337,7 @@ fixes dans le référentiel du laboratoire (Cf. paragraphe suivant).
 \subsection*{7. Energie magnétique}
 \subsubsection*{b) Energie magnétique de deux circuits couplés}
 Les variations temporelles du flux du champ magnétique
-$\Phi_{i}\left(t\right)$ (avec $i=1,2$) à travers la surface $S_{i}$ (donc à
+$\Phi_{i}(t)$ (avec $i=1,2$) à travers la surface $S_{i}$ (donc à
 travers le circuit lui-même à l'origine du champ magnétique
 $\overrightarrow{B}_{i}$) sont sources d'une fem induite dite
 d'auto-induction. \\
@@ -397,8 +397,8 @@ positive\footnote{Comme le polynôme du second degré est positif, son
 discriminant est négatif ou nul. En fait $E_{p}$ est l'énergie
 magnétique introduite lors du bilan de Poynting (Cf. EM5) ; aussi,
 on a avec les notations de EM5 : $E_{p} = E_{m} = \iiint_{M\in
-\mathrm{Espace}}w_{m}\left(M,t\right)\mathrm{d}V\left(M\right)$ avec $w_{m} = \frac{B^{2}}{2\mu_{0}}$, donc
-$E_{p} = \iiint_{M \in \left(\mathcal{D}\right)} \frac{B^{2}}{2\mu_{0}}\mathrm{d}V\left(M\right)
+\mathrm{Espace}}w_{m}(M,t)\mathrm{d}V(M)$ avec $w_{m} = \frac{B^{2}}{2\mu_{0}}$, donc
+$E_{p} = \iiint_{M \in \left(\mathcal{D}\right)} \frac{B^{2}}{2\mu_{0}}\mathrm{d}V(M)
 \geq 0$.}. On exploite cette propriété en considérant que $E_{p}$
 est, par exemple, fonction de la variable $i_{1}$ (à $i_{2}$ fixé ;
 on pourrait aussi dire que $E_{p}$ est une fonction de la variable
@@ -417,7 +417,7 @@ Si $k\ll 1$, on parle de couplage faible ; en revanche, si $k \approx
 \underline{Astuce de calcul:} S'il n'existe qu'un seul circuit
 (disons le circuit 1), on peut calculer $L_{1}$ à partir de
 l'égalité suivante : $E_{p} = \iiint_{M\in
-\left(\mathcal{D}_{1}\right)}\frac{B_{1}^{2}}{2\mu_{0}}\left(M,t\right)\mathrm{d}V\left(M\right)=\frac{1}{2}L_{1}i_{1}^{2}\left(t\right)$.
+\left(\mathcal{D}_{1}\right)}\frac{B_{1}^{2}}{2\mu_{0}}(M,t)\mathrm{d}V(M)=\frac{1}{2}L_{1}i_{1}^{2}(t)$.
 
 \section*{II. Induction de Lorentz}
 \subsection*{2. Changement de référentiel galiléen en électromagnétisme}
@@ -458,9 +458,9 @@ On écrit :
 \end{eqnarray}
 Le théorème de composition newtonienne des vitesses entre (R) et
 (R') donne (Cf. M1 avec ici $\overrightarrow{v} =
-\overrightarrow{v}_{\mathrm{/R}}\left(M\right)$, $\overrightarrow{v'} =
-\overrightarrow{v}_{\mathrm{/R'}}\left(M\right)$, $\overrightarrow{v}_{e} =
-\overrightarrow{v}_{\mathrm{/R}}\left(O'\right)$) : $\overrightarrow{v} =
+\overrightarrow{v}_{\mathrm{/R}}(M)$, $\overrightarrow{v'} =
+\overrightarrow{v}_{\mathrm{/R'}}(M)$, $\overrightarrow{v}_{e} =
+\overrightarrow{v}_{\mathrm{/R}}(O')$) : $\overrightarrow{v} =
 \overrightarrow{v'}+\overrightarrow{v}_{e}$. \\
 Ici $\overrightarrow{v'} = \overrightarrow{0}$. \\
 Dans l'ARQS magnétique : $\overrightarrow{B} = \overrightarrow{B'}$
@@ -493,7 +493,7 @@ rigide (=indéformable). Aussi, on écrit : \\
 Soit un circuit filiforme parcouru par un courant
 d'intensité $i$ (stationnaire ou dépendant du temps), plongé dans un
 champ
-magnétique $\overrightarrow{B}\left(M,t\right)$. \\
+magnétique $\overrightarrow{B}(M,t)$. \\
 Le circuit subit des actions mécaniques dont la résultante (dite des
 actions de Laplace) ou plus simplistement "force de Laplace" a pour
 expression : \\
@@ -540,7 +540,7 @@ barre.}\label{Fig.4}
 Laplace s'exerçant sur le circuit de contour $\Gamma$ se ramène à
 celle s'exerçant sur le seul barreau : \\
 $\overrightarrow{F} = \oint_{M\in
-\Gamma}i\left(t\right)\overrightarrow{\mathrm{d}\ell}\left(M\right)\times \overrightarrow{B} =
+\Gamma}i(t)\overrightarrow{\mathrm{d}\ell}(M)\times \overrightarrow{B} =
 i\int_{A}^{C}\left[\mathrm{d}y\overrightarrow{u}_{y}\right] \times
 \left[B\overrightarrow{u}_{z}\right] = i\ell B \overrightarrow{u}_{x}$. \\
 Calculons la fem induite. \textit{A priori} le circuit se déformant,
@@ -554,19 +554,19 @@ $\overrightarrow{v}=\overrightarrow{v}_{e}$ la vitesse du barreau
 qui est encore la vitesse d'entraînement du référentiel relatif,
 référentiel lié au barreau qui est en mouvement de translation par
 rapport à R). On écrit : \\
-$e\left(t\right) = \oint_{M \Gamma}
-\overrightarrow{E}_{m}\left(t\right).\overrightarrow{\mathrm{d}\ell}\left(M\right)=
+$e(t) = \oint_{M \Gamma}
+\overrightarrow{E}_{m}(t).\overrightarrow{\mathrm{d}\ell}(M)=
 \int_{A}^{C}\left[-vB\overrightarrow{u}_{y}\right].\left[\mathrm{d}y\overrightarrow{u}_{y}\right]$
 . \\
-Il vient : \fbox{$e\left(t\right)=-v\left(t\right)B\ell$}. \\
+Il vient : \fbox{$e(t)=-v(t)B\ell$}. \\
 Tentons maintenant de calculer la fem induite\footnote{"Passage en
 force" !} par la loi de Faraday : entre $t$ et $t+\mathrm{d}t$ la surface du
-circuit a varié de $\mathrm{d}S\left(t\right) = \ell \mathrm{d}x\left(t\right) = \ell v\left(t\right)\mathrm{d}t$. Le flux a
+circuit a varié de $\mathrm{d}S(t) = \ell \mathrm{d}x(t) = \ell v(t)\mathrm{d}t$. Le flux a
 varié de ($\overrightarrow{\mathrm{d}S}$ est dirigé comme
 $\overrightarrow{B}$) $\mathrm{d}\Phi =
 \overrightarrow{B}.\overrightarrow{\mathrm{d}S} = vB\ell \mathrm{d}t$. Il vient :
-\fbox{$e\left(t\right) =
--v\left(t\right)B\ell$}. \\
+\fbox{$e(t) =
+-v(t)B\ell$}. \\
 Diantre ! Pourquoi la loi de Faraday s'applique-t-elle ici ?\\
 En fait, le circuit est formé par les rails indéformables et ne sont
 là que pour refermer le circuit électriquement ; de surcroît,
@@ -576,10 +576,10 @@ de Barlow
 pour avoir un cas de non-application de la loi de Faraday). \\
 On réalise ensuite un circuit électrique équivalent (Cf. figure
 \ref{Fig.4}) sur lequel on applique la loi des mailles qui
-trivialement donne : $e\left(t\right) = Ri$ avec $R$ la résistance électrique
+trivialement donne : $e(t) = Ri$ avec $R$ la résistance électrique
 du circuit et $i$ l'intensité du courant induit (orienté comme $e$ ;
 c'est une grandeur algébrique).
-Il vient : \fbox{$i\left(t\right) = -\frac{vB\ell}{R}$}. \\
+Il vient : \fbox{$i(t) = -\frac{vB\ell}{R}$}. \\
 La force de Laplace prend la forme : \\
 \centerline{\mathcolorbox{gray!20}{\overrightarrow{F} =i\ell B\overrightarrow{u}_{x} =
 -\frac{\ell^{2}B^{2}}{R}v\overrightarrow{u}_{x} = -\alpha
@@ -592,13 +592,13 @@ points ont la même vitesse) le théorème de la résultante cinétique
 ou théorène du centre d'inertie
 ($\overrightarrow{P}+\overrightarrow{R}_{N} = \overrightarrow{0}$)
 projeté selon l'axe (Ox) ($m$ est la masse de la barre) :
-$m\frac{\mathrm{d}v}{\mathrm{d}t} = i\left(t\right)\ell B = -\frac{\ell^{2}B^{2}}{R}v\left(t\right)$. \\
+$m\frac{\mathrm{d}v}{\mathrm{d}t} = i(t)\ell B = -\frac{\ell^{2}B^{2}}{R}v(t)$. \\
 On pose $\tau = \frac{mR}{\ell^{2}B^{2}}$ une grandeur homogène à un
 temps, caractéristique des variations temporelles de la vitesse $v$
 de la barre. Il vient : \fbox{$\frac{\mathrm{d}v}{\mathrm{d}t}+\frac{v}{\tau} = 0$}.
 \\
 A l'aide de la CI, on calcule la loi d'évolution de la vitesse de la
-barre : \fbox{$v\left(t\right) = v_{0}e^{-\frac{t}{\tau}}$}.
+barre : \fbox{$v(t) = v_{0}e^{-\frac{t}{\tau}}$}.
 \end{itemize}
 
 \subsection*{8. Bilan de conversion électromécanique}
@@ -606,7 +606,7 @@ On vérifie le bilan de puissance électromécanique à partir de
 l'exemple des rails de Laplace. \\
 La puissance fournie par la fem induite (on travaille en convention
 générateur) est : $\mathcal{P}_{\mathrm{fem}} =
-e\left(t\right)i\left(t\right) = \frac{e^{2}}{R} = \frac{v^{2}\ell^{2}B^{2}}{R}$. \\
+e(t)i(t) = \frac{e^{2}}{R} = \frac{v^{2}\ell^{2}B^{2}}{R}$. \\
 La puissance fournie par les actions de Laplace est :
 $\mathcal{P}_{\mathrm{Laplace}} = \overrightarrow{F}_{L}.\overrightarrow{v} =
 i\ell B v = \frac{e}{R}B\ell v = -\frac{v^{2}\ell^{2} B^{2}}{R}$. \\
@@ -645,9 +645,9 @@ temps caractéristique $\tau = \frac{mR}{B^{2}\ell^{2}}$ et on
 aboutit à
 l'équation : $\frac{\mathrm{d}v}{\mathrm{d}t}+\frac{v}{\tau} = \frac{B\ell}{mR}E$. \\
 La résolution de cette équation différentielle linéaire du premier
-ordre à coefficients constants donne : $v\left(t\right) = \tau\frac{B\ell}{mR}E
+ordre à coefficients constants donne : $v(t) = \tau\frac{B\ell}{mR}E
 +Ae^{-\frac{t}{\tau}}$. On pose $v_{\mathrm{lim}} = \frac{E}{B\ell}$. \\
-Avec la CI, $v\left(t=0\right) = 0$, il vient : \fbox{$v\left(t\right) =
+Avec la CI, $v(t=0) = 0$, il vient : \fbox{$v(t) =
 v_{\mathrm{lim}}\left[1-e^{-\frac{t}{\tau}}\right]$}. \\
 Lorsque $t \rightarrow +\infty$, $v \rightarrow v_{\mathrm{lim}}$ ; une fois
 le régime permanent atteint, le barreau est en mouvement de
@@ -656,7 +656,7 @@ translation rectiligne uniforme. \\
 Initialement, le générateur produit un courant d'intensité $I_{0} =
 \frac{E}{R}$ dans le circuit. Le barreau initialement au repos se
 met en mouvement sous l'effet de la force de Laplace "initiale"
-d'expression : $\overrightarrow{F}_{L} \left(t=0\right) =
+d'expression : $\overrightarrow{F}_{L} (t=0) =
 I_{0}B \ell\overrightarrow{u}_{x}$. \\
 On est bien en présence d'une transduction électromécanique mais
 c'est "l'effet inverse" de celui mettant en évidence les rails de
@@ -670,7 +670,7 @@ induit d'intensité : $i_{\mathrm{in\mathrm{d}uit}} =
 \frac{e}{R} = -\frac{vB\ell}{R}$. \\
 D'après la loi de modération de Lenz, $i_{\mathrm{in\mathrm{d}uit}}$ tend à s'opposer
 aux causes qui lui ont donné naissance : $\mathrm{d}\Phi = B\ell v \mathrm{d}t >0$,
-donc $e\left(t\right) < 0$, donc $i_{\mathrm{in\mathrm{d}uit}} < 0$ : $i_{\mathrm{in\mathrm{d}uit}}$ s'oppose ici à
+donc $e(t) < 0$, donc $i_{\mathrm{in\mathrm{d}uit}} < 0$ : $i_{\mathrm{in\mathrm{d}uit}}$ s'oppose ici à
 $I_{0}$. Ceci perdure jusqu'à une vitesse acquise $v_{\mathrm{lim}}$ par le
 barreau pour laquelle $i_{\mathrm{in\mathrm{d}uit}}$ compense $I_{0}$ : on a alors
 $I_{0}-\frac{v_{\mathrm{lim}}B\ell}{R}=0$, soit : $v_{\mathrm{lim}} = \frac{RI_{0}}{B
@@ -698,9 +698,9 @@ Au final, $\mathcal{P}_{\mathrm{fem}}+\mathcal{P}_{\mathrm{Laplace}}=0$.
 dans le cas général}
 Dans le cas général, on définit la fem à partir du travail de la
 charge (subissant la force de Lorentz) le long du contour $\Gamma$ :
-$e\left(t\right) = \frac{\delta W\left(\overrightarrow{F}\right)}{q}$, soit
+$e(t) = \frac{\delta W\left(\overrightarrow{F}\right)}{q}$, soit
 ($\overrightarrow{v}_{e} =
-\overrightarrow{v}_{\mathrm{/R}}\left(M\right)=\overrightarrow{v}$ la vitesse de la
+\overrightarrow{v}_{\mathrm{/R}}(M)=\overrightarrow{v}$ la vitesse de la
 charge $q$ dans (R) ; la charge est au repos dans le référentiel
 relatif (R') : $\overrightarrow{v}'=\overrightarrow{0}$):
 \\
@@ -710,10 +710,10 @@ relatif (R') : $\overrightarrow{v}'=\overrightarrow{0}$):
 \overrightarrow{B}].\overrightarrow{d\ell}(M)}}. \\
 A l'aide du théorème de Stokes (en utilisant les conventions
 d'orientation habituelles, $S$ surface ouverte s'appuyant sur le
-contour $\Gamma$), on a : $e\left(t\right) = \iint_{P\in
-S}\rot \overrightarrow{E}.\overrightarrow{\mathrm{d}S}\left(P\right)+\oint_{M\in
+contour $\Gamma$), on a : $e(t) = \iint_{P\in
+S}\rot \overrightarrow{E}.\overrightarrow{\mathrm{d}S}(P)+\oint_{M\in
 \Gamma}\left[\overrightarrow{v}_{e}\times
-\overrightarrow{B}\right].\overrightarrow{\mathrm{d}\ell}\left(M\right)$. \\
+\overrightarrow{B}\right].\overrightarrow{\mathrm{d}\ell}(M)$. \\
 Enfin, à l'aide de l'équation de Maxwell-Faraday, on obtient
 l'expression la plus générale de la fem induite :
 \begin{eqnarray}\label{Eq.60}
@@ -727,28 +727,28 @@ t}(P,t).\overrightarrow{dS}(P) +\oint_{M\in
 cas particuliers}\begin{itemize}
 \item Si $\overrightarrow{v}_{e} = \overrightarrow{0}$ : (R') est au
 repos par rapport à (R), on est dans le cadre de l'induction de
-Neumann ; l'équation (\ref{Eq.60}) devient : $e\left(t\right) = -\iint_{P\in
+Neumann ; l'équation (\ref{Eq.60}) devient : $e(t) = -\iint_{P\in
 S}\frac{\partial\overrightarrow{B}}{\partial
-t}\left(P,t\right).\overrightarrow{\mathrm{d}S}\left(P\right)= -\frac{\mathrm{d}}{\mathrm{d}t}\Phi\left(t\right)$ avec $\Phi\left(t\right)
-= \iint_{P\in S}\overrightarrow{B}\left(P,t\right).\overrightarrow{\mathrm{d}S}\left(P\right)$. La
+t}(P,t).\overrightarrow{\mathrm{d}S}(P)= -\frac{\mathrm{d}}{\mathrm{d}t}\Phi(t)$ avec $\Phi(t)
+= \iint_{P\in S}\overrightarrow{B}(P,t).\overrightarrow{\mathrm{d}S}(P)$. La
 loi de Faraday est licite.
 \item Si $\frac{\partial \overrightarrow{B}}{\partial t} =
 \overrightarrow{0}$, on est dans le cadre de l'induction de Lorentz;
-l'équation (\ref{Eq.60}) devient : $e\left(t\right) = \oint_{M\in
+l'équation (\ref{Eq.60}) devient : $e(t) = \oint_{M\in
 \Gamma}\left[\overrightarrow{v}_{e}\times
-\overrightarrow{B}\right].\overrightarrow{\mathrm{d}\ell}\left(M\right)$.
+\overrightarrow{B}\right].\overrightarrow{\mathrm{d}\ell}(M)$.
 \end{itemize}
 
 \subsection*{3. Loi de Faraday dans les circuits de constitution rigide en translation rectiligne uniforme par rapport (R)}
 On peut montrer\footnote{Démonstration sur le site dans les additifs
 ?} (Cf. annexe 6 du cours EM5 bis pour le schéma) que si le circuit
-$\Gamma$ est rigide durant son déplacement, on a : $e\left(t\right) =
+$\Gamma$ est rigide durant son déplacement, on a : $e(t) =
 -\iint_{P\in S}\frac{\partial\overrightarrow{B}}{\partial
-t}\left(P,t\right).\overrightarrow{\mathrm{d}S}\left(P\right) +\oint_{M\in
+t}(P,t).\overrightarrow{\mathrm{d}S}(P) +\oint_{M\in
 \Gamma}\left[\overrightarrow{v}_{e}\times
-\overrightarrow{B}\right].\overrightarrow{\mathrm{d}\ell}\left(M\right) =
+\overrightarrow{B}\right].\overrightarrow{\mathrm{d}\ell}(M) =
 -\frac{\mathrm{d}}{\mathrm{d}t}\iint_{P\in
-S}\overrightarrow{B}\left(P,t\right).\overrightarrow{\mathrm{d}S}\left(P\right) = -\frac{\mathrm{d}\Phi}{\mathrm{d}t}\left(t\right)$ : la loi de Faraday demeure licite.
+S}\overrightarrow{B}(P,t).\overrightarrow{\mathrm{d}S}(P) = -\frac{\mathrm{d}\Phi}{\mathrm{d}t}(t)$ : la loi de Faraday demeure licite.
 
 \subsection*{4. Exit la loi de Faraday dans les circuits de constitution
 variable ...}
