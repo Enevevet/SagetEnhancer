@@ -155,24 +155,24 @@ par $\overrightarrow{\mathrm{d}S}(P)$ puis intégrons sur toute la surface
 ouverte $S$ ; en vertu de l'équation de Maxwell-Faraday, on a :
 \begin{eqnarray}\label{Eq.1}
 \iint_{P\in S}
-\overrightarrow{rot}\overrightarrow{E}.\overrightarrow{dS}(P) =
+\rot \overrightarrow{E}.\overrightarrow{\mathrm{d}S}(P) =
 -\iint_{P\in S} \frac{\partial \overrightarrow{B}(P,t)}{\partial
-t}.\overrightarrow{dS}(P).
+t}.\overrightarrow{\mathrm{d}S}(P).
 \end{eqnarray}
 En vertu du théorème de Stokes-Ampère, l'équation (\ref{Eq.1})
 s'écrit encore :
 \begin{eqnarray}\label{Eq.2}
-\oint_{M\in \Gamma}\overrightarrow{E}(M,t).\overrightarrow{d\ell}(M)
+\oint_{M\in \Gamma}\overrightarrow{E}(M,t).\overrightarrow{\mathrm{d}\ell}(M)
 = -\iint_{P\in S} \frac{\partial \overrightarrow{B}(P,t)}{\partial
-t}.\overrightarrow{dS}(P).
+t}.\overrightarrow{\mathrm{d}S}(P).
 \end{eqnarray}
 Or, l'élément de circuit est fixe, indéformable, dans le référentiel
 d'étude : on peut intervertir l'opérateur $\frac{\partial}{\partial
 t}$ et l'intégrale double. Il vient :
 \begin{eqnarray}\label{Eq.3}
-\oint_{M\in \Gamma}\overrightarrow{E}(M,t).\overrightarrow{d\ell}(M)
-= - \frac{d}{dt}\iint_{P \in
-S}\overrightarrow{B}(P,t).\overrightarrow{dS}(P).
+\oint_{M\in \Gamma}\overrightarrow{E}(M,t).\overrightarrow{\mathrm{d}\ell}(M)
+= - \frac{\mathrm{d}}{\mathrm{d}t}\iint_{P \in
+S}\overrightarrow{B}(P,t).\overrightarrow{\mathrm{d}S}(P).
 \end{eqnarray}
 Or, $\phi(t) = \iint_{P\in
 S}\overrightarrow{B}(P,t).\overrightarrow{\mathrm{d}S}(P)$ est le flux du
@@ -718,9 +718,9 @@ Enfin, à l'aide de l'équation de Maxwell-Faraday, on obtient
 l'expression la plus générale de la fem induite :
 \begin{eqnarray}\label{Eq.60}
 e(t) = -\iint_{P\in S}\frac{\partial\overrightarrow{B}}{\partial
-t}(P,t).\overrightarrow{dS}(P) +\oint_{M\in
-\Gamma}[\overrightarrow{v}_{e}\times
-\overrightarrow{B}].\overrightarrow{d\ell}(M).
+t}(P,t).\overrightarrow{\mathrm{d}S}(P) +\oint_{M\in
+\Gamma}\left[\overrightarrow{v}_{e}\times
+\overrightarrow{B}\right].\overrightarrow{\mathrm{d}\ell}(M).
 \end{eqnarray}
 
 \subsection*{2. Cas limites des inductions de Neumann et Lorentz comme
