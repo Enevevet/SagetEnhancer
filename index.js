@@ -34,6 +34,9 @@ fs.readdir("./tex_files/", (err, files) => {
 
         //REPLACER DE MATHS
         function replacer(match, p1, p2, p3, p4, offset, string) {
+            p2 = p2.replace(/\\overrightarrow{rot}/g, "\\rot ")
+            p2 = p2.replace(/\\overrightarrow{grad}/g, "\\grad ")
+            p2 = p2.replace(/div/g, "\\div")
             p2 = p2.replace(/(?<!\\[a-z]*)\[/gi, "\\left[") //Genre c'est possible mdr
             p2 = p2.replace(/(?<!\\[a-z]*\[[a-z]*)\]/gi, "\\right]") // JPP, pire arnaqueur du monde
             p2 = p2.replace(/(?<!\\([a-z]|[A-Z])*)d/gm, "\\mathrm{d}") //MATHRM D PTN
