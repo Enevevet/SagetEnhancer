@@ -53,6 +53,18 @@ fs.readdir("./tex_files/", (err, files) => {
         par = par.replace(/<</g, "\\ll")
         par = par.replace(/>>/g, "\\gg")
 
+
+        function figreplacer(match, p1, offset, string) {
+            match = match.replace(/\\begin{figure}\[[a-z]\]/g, "\n\n\\begin{wrapfigure}{r}{0.25\\textwidth}")
+            match = match.replace(/\\end{figure}/g, "\\end{wrapfigure}\n\n")
+            match = match.replace(/\\(begin|end){center}(\r?\n?)/g, "")
+            match = match.replace(/=(.*?)\.eps/g, "=$1.PNG")
+            match = match.replace(/\\caption/g, "\\caption\\protect")
+            return match;
+        }
+        par = par.replace(/\\begin{figure}(.|\r|\n)*?\\end{figure}/g, figreplacer)
+            //console.log(par.match(//g))
+
         //Écriture dans le fichier
         fs.writeFile(`./results/${file}`, par, (err) => {
             if (err) throw err;
