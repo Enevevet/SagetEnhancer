@@ -43,6 +43,7 @@ fs.readdir("./tex_files/", (err, files) => {
             p3 = p3.replace(/(Gauss)/gi, "\\mathrm{$1}")
             p3 = p3.replace(/(?<!\\([a-z]|[A-Z])*)d/gm, "\\mathrm{d}") //MATHRM D PTN
             p3 = p3.replace(/(?<!\\(([a-z]|[A-Z])*|(mathcal{)))D/gm, "\\mathrm{D}")
+            p3 = p3.replace(/(cte|cste)/g, "\\mathrm{$1}")
             return `${p1}${p2}${p3}${p5}`;
         }
 
