@@ -22,7 +22,7 @@
 
 \usepackage{xcolor}
 \usepackage{soul}
-\newcommand{\mathcolorbox}[2]{\colorbox{#1}{$#2$}}
+\newcommand{\mathcolorbox}[2]{\fcolorbox{black}{#1}{$#2$}}
 
 \DeclareSymbolFont{legacyletters}{OML}{cmm}{m}{it}
 \let\j\relax
@@ -83,12 +83,12 @@
 \let\grad\relax
 \DeclareMathOperator{\grad}{\overrightarrow{\mathrm{grad}}}
 
+
 \title{\huge{\textbf{Cours EM5 bis : Induction électromagnétique}}}
 \author{par Guillaume Saget, professeur de Sciences Physiques en MP, Lycée Champollion}
 \date{}
-
-\begin{document}\maketitle
-
+\begin{document}
+\maketitle
 
 \begin{abstract}
 Je propose ici le cours EM5 bis dédié au phénomène d'induction (au
@@ -347,8 +347,8 @@ bobine) et d'auto-induction (induction à travers le circuit
 inducteur lui-même). On a : $e_{1} = -\frac{\mathrm{d}\Phi_{1}}{\mathrm{d}t}$ avec
 $\Phi_{1} = \Phi_{\mathrm{1 \rightarrow 1}}+ \Phi_{\mathrm{2 \rightarrow 1}}$ avec
 $\Phi_{\mathrm{1 \rightarrow 1}} = L_{1}i_{1}$ et $\Phi_{\mathrm{2 \rightarrow 1}} =
-Mi_{2}$ ; $e_{2} = -\frac{\mathrm{d}\Phi_{2}}{\mathrm{d}t}$ avec $\Phi_{2} = \Phi_{2
-\rightarrow 2}+ \Phi_{\mathrm{1 \rightarrow 2}}$ avec $\Phi_{\mathrm{2 \rightarrow 2}}
+Mi_{2}$ ; $e_{2} = -\frac{\mathrm{d}\Phi_{2}}{\mathrm{d}t}$ avec $\Phi_{2} = \Phi_{\mathrm{2
+\rightarrow 2}}+ \Phi_{\mathrm{1 \rightarrow 2}}$ avec $\Phi_{\mathrm{2 \rightarrow 2}}
 = L_{2}i_{2}$ et $\Phi_{\mathrm{1 \rightarrow 2}} = Mi_{1}$.
 \\
 On a besoin du caractère rigide des bobines (sinon $L_{1}$, $L_{2}$
