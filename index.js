@@ -84,4 +84,4 @@ fs.readdir("./tex_files/", (err, files) => {
 //THE MOST AMAZING SHIT IN THE WORLD :
 //par = par.replace(/(?<=\$(.|\r?\n?)*?)(?<!\\([a-z]|[A-Z]){1,})d(?=(.|\r?\n?)*?\$)/g, "\\mathrm{d}")
 //par = par.replace(/(?<=\$(.)*?)(?<!\\([a-z]|[A-Z]){0,})d(?=(.)*?\$)/gm, "\\mathrm{d}")
-//par = par.replace(/\$((.|\r?\n?)*?)(?<!\\([a-z]|[A-Z])*)d((.|\r?\n?)*?)\$/g, "$$$1\\mathrm{d}$4$$")
+//par = par.replace(/\$((.|\r?\n?)*?)(?<!\\([a-z]|[A-Z])*)d((.|\r?\n?)*?)\$/g, "$$$1\\mathrm{d}$4$$").
