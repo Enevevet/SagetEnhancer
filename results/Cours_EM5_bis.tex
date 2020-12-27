@@ -101,7 +101,7 @@ $\times$ désigne le produit vectoriel.
 \subsection*{2. Champ électromoteur et force électromotrice de Neumann}
 L'équation de Maxwell permettant d'expliquer le phéno-mène
 d'induction est l'équation de Maxwell-Faraday (M.F.): \\
-\centerline{\mathcolorbox{gray!20}{\overrightarrow{rot}\overrightarrow{E}= -\frac{\partial
+\centerline{\mathcolorbox{gray!20}{\rot \overrightarrow{E}= -\frac{\partial
 \overrightarrow{B}}{\partial t}}}. \\
 Physiquement, cette relation exprime que les variations temporelles
 du champ magnétique sont sources d'un champ électrique dit induit.
@@ -120,7 +120,7 @@ $V(M,t)$ tel que : $\overrightarrow{E}+\frac{\partial
 encore (en rajoutant les fioritures
 d'usage) : \\
 \centerline{\mathcolorbox{gray!20}{\overrightarrow{E}(M,t) = -\frac{\partial
-\overrightarrow{A}}{\partial t}(M,t) -\overrightarrow{grad}V(M,t)}}. \\
+\overrightarrow{A}}{\partial t}(M,t) -\grad V(M,t)}}. \\
 On appelle champ électromoteur de Neumann la contribution du champ
 électrique à circulation non conservative, i.e. :
 \fbox{$\overrightarrow{E}_{m}(M,t) = -\frac{\partial
@@ -141,8 +141,8 @@ On appelle fem (induite) la circulation du champ électrique le long
 du contour
 $\Gamma$ : \\
 \centerline{\mathcolorbox{gray!20}{e(t) = \oint_{M \in
-\Gamma}\overrightarrow{E}(M,t).\overrightarrow{d\ell}(M) = \oint_{M
-\in \Gamma}\overrightarrow{E}_{m}(M,t).\overrightarrow{d\ell}(M)}}.
+\Gamma}\overrightarrow{E}(M,t).\overrightarrow{\mathrm{d}\ell}(M) = \oint_{M
+\in \Gamma}\overrightarrow{E}_{m}(M,t).\overrightarrow{\mathrm{d}\ell}(M)}}.
 
 \subsection*{3. Loi de Faraday}
 Soit un circuit filiforme, fixe, indéformable dont le
@@ -179,7 +179,7 @@ S}\overrightarrow{B}(P,t).\overrightarrow{\mathrm{d}S}(P)$ est le flux du
 champ magnétique à travers $(S)$ (rappelons que ce flux est
 indépendant de la forme de la surface ouverte s'appuyant sur
 $\Gamma$). On en déduit l'expression de la loi de Faraday : \\
-\centerline{\mathcolorbox{gray!20}{e(t) = -\frac{d\phi}{dt}(t)}}.
+\centerline{\mathcolorbox{gray!20}{e(t) = -\frac{\mathrm{d}\phi}{\mathrm{d}t}(t)}}.
 \subsection*{5. Induction de Neumann dans un circuit filiforme}
 \subsubsection*{b) Exemple d'application : spire circulaire plongée dans un
 champ magnétique uniforme variant sinusoïdalement dans le temps}
@@ -233,7 +233,7 @@ et $i_{2}(t)$.
 Chacun des circuits créé un champ magnétique $\overrightarrow{B}_{i}$ avec $i=1,2$. \\
 On introduit ici un coefficient caractéristique qui ne dépend que la
 géométrie du circuit appelé coefficient d'inductance propre ou d'auto-induction $L_{i}$  positif défini pour chacun des circuits par : \\
-\centerline{\mathcolorbox{gray!20}{\Phi_{1\rightarrow 1}(t) = L_{1}i_{1}(t)}} et
+\centerline{\mathcolorbox{gray!20}{\Phi_{\mathrm{1\rightarrow 1}}(t) = L_{1}i_{1}(t)}} et
 \fbox{$\Phi_{\mathrm{2\rightarrow 2}}(t) = L_{2}i_{2}(t)$}. \\
 $\Phi_{\mathrm{1\rightarrow 1}}(t)$ désigne le flux du champ magnétique
 $\overrightarrow{B}_{1}$ à travers le circuit $\mathcal{C}_{1}$. \\
@@ -252,7 +252,7 @@ On définit encore les coefficients d'inductance mutuelle
 caractéristiques des interactions entre ces deux circuits (chacun
 des champs magnétiques propres contribuent au flux du champ
 magnétique de l'autre circuit) par : \\
-\centerline{\mathcolorbox{gray!20}{\Phi_{1\rightarrow 2}(t) = M_{12}i_{1}(t)}} et
+\centerline{\mathcolorbox{gray!20}{\Phi_{\mathrm{1\rightarrow 2}}(t) = M_{\mathrm{12}}i_{1}(t)}} et
 \fbox{$\Phi_{\mathrm{2\rightarrow 1}}(t) = M_{\mathrm{21}}i_{2}(t)$}. \\
 $\Phi_{\mathrm{1\rightarrow 2}}(t)$ désigne le flux du champ magnétique
 $\overrightarrow{B}_{1}$ à travers le circuit $\mathcal{C}_{2}$. \\
@@ -478,7 +478,7 @@ On définit (au sens de Lorentz) le champ électromoteur par
 \\
 La définition de la fem induite est inchangée par rapport à celle introduite au sens de Neumann : \\
 \centerline{\mathcolorbox{gray!20}{e=\oint_{M\in
-\Gamma}\overrightarrow{E}_{m}.\overrightarrow{d\ell}(M)}}.
+\Gamma}\overrightarrow{E}_{m}.\overrightarrow{\mathrm{d}\ell}(M)}}.
 
 \subsection*{4. Loi de Faraday}
 La loi de Faraday demeure licite dans le cadre de
@@ -486,8 +486,8 @@ l'induction de Lorentz à la condition que le circuit (constitue le
 référentiel relatif (R') nommé "référentiel circuitocentrique") soit
 rigide (=indéformable). Aussi, on écrit : \\
 \centerline{\mathcolorbox{gray!20}{e=\oint_{M \in
-\Gamma}\overrightarrow{E}_{m}.\overrightarrow{d\ell}(M) =
--\frac{d\Phi}{dt}}}.
+\Gamma}\overrightarrow{E}_{m}.\overrightarrow{\mathrm{d}\ell}(M) =
+-\frac{\mathrm{d}\Phi}{\mathrm{d}t}}}.
 
 \subsection*{5)  Rappels sur la force de Laplace}
 Soit un circuit filiforme parcouru par un courant
@@ -498,7 +498,7 @@ Le circuit subit des actions mécaniques dont la résultante (dite des
 actions de Laplace) ou plus simplistement "force de Laplace" a pour
 expression : \\
 \centerline{\mathcolorbox{gray!20}{\overrightarrow{F}_{L} = \oint_{M \in
-\Gamma}i\overrightarrow{d\ell}(M) \times \overrightarrow{B}(M,t)}}.
+\Gamma}i\overrightarrow{\mathrm{d}\ell}(M) \times \overrightarrow{B}(M,t)}}.
 \\
 \textbf{Dans cette expression, le déplacement élémentaire le long du
 circuit est de même sens que l'intensité du courant.}
@@ -705,9 +705,9 @@ charge $q$ dans (R) ; la charge est au repos dans le référentiel
 relatif (R') : $\overrightarrow{v}'=\overrightarrow{0}$):
 \\
 \centerline{\mathcolorbox{gray!20}{e(t) = \oint_{M\in
-\Gamma}\overrightarrow{E}.\overrightarrow{d\ell}(M)+\oint_{M\in
-\Gamma}[\overrightarrow{v}_{e}\times
-\overrightarrow{B}].\overrightarrow{d\ell}(M)}}. \\
+\Gamma}\overrightarrow{E}.\overrightarrow{\mathrm{d}\ell}(M)+\oint_{M\in
+\Gamma}\left[\overrightarrow{v}_{e}\times
+\overrightarrow{B}\right].\overrightarrow{\mathrm{d}\ell}(M)}}. \\
 A l'aide du théorème de Stokes (en utilisant les conventions
 d'orientation habituelles, $S$ surface ouverte s'appuyant sur le
 contour $\Gamma$), on a : $e(t) = \iint_{P\in

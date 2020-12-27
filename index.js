@@ -21,8 +21,6 @@ fs.readdir("./tex_files/", (err, files) => {
 
         par = par.replace(/(?<=\\begin{document}(\n|\r))/gm, "\\maketitle")
 
-        par = par.replace(/(?<=\\\\.?\n)\\fbox{\$((.|\n)*?)\$/gmis, "\\centerline{\\mathcolorbox{gray!20}{$1}")
-
         par = par.replace(/\\noindent /g, "");
 
         par = par.replace(/\$( |\n)?\$ ?= ?\$( |(\r?\n))?\$/g, " = ")
@@ -66,6 +64,8 @@ fs.readdir("./tex_files/", (err, files) => {
         }
         par = par.replace(/\\begin{figure}(.|\r|\n)*?\\end{figure}/g, figreplacer)
             //console.log(par.match(//g))
+
+        par = par.replace(/(?<=\\\\.?\n)\\fbox{\$((.|\n)*?)\$/gmis, "\\centerline{\\mathcolorbox{gray!20}{$1}")
 
         //Écriture dans le fichier
         fs.writeFile(`./results/${file}`, par, (err) => {
