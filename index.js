@@ -66,6 +66,7 @@ fs.readdir("./tex_files/", (err, files) => {
             //console.log(par.match(//g))
 
         par = par.replace(/(?<=\\\\.?\n)\\fbox{\$((.|\n)*?)\$/gmis, "\\centerline{\\mathcolorbox{gray!20}{$1}")
+        par = par.replace(/\\fbox{\$((.|\n|\r)*?)\$/gims, "\\mathcolorbox{gray!20}{$1")
 
         //Écriture dans le fichier
         fs.writeFile(`./results/${file}`, par, (err) => {
