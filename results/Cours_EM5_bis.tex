@@ -93,7 +93,7 @@
 \begin{abstract}
 Je propose ici le cours EM5 bis dédié au phénomène d'induction (au
 sens de Neumann et au sens de Lorentz). Dans tout le corps de texte,
-$\times$ désigne le produit vectoriel.
+$\wedge$ désigne le produit vectoriel.
 \end{abstract}
 
 
@@ -452,9 +452,9 @@ force par
 changement de référentiel. \\
 On écrit :
 \begin{eqnarray}\label{Eq.10}
-\overrightarrow{F}=q\overrightarrow{E}+q\overrightarrow{v}\times\overrightarrow{B}
+\overrightarrow{F}=q\overrightarrow{E}+q\overrightarrow{v}\wedge \overrightarrow{B}
 =
-\overrightarrow{F'}=q\overrightarrow{E'}+q\overrightarrow{v'}\times\overrightarrow{B'}.
+\overrightarrow{F'}=q\overrightarrow{E'}+q\overrightarrow{v'}\wedge \overrightarrow{B'}.
 \end{eqnarray}
 Le théorème de composition newtonienne des vitesses entre (R) et
 (R') donne (Cf. M1 avec ici $\overrightarrow{v} =
@@ -464,17 +464,15 @@ Le théorème de composition newtonienne des vitesses entre (R) et
 \overrightarrow{v'}+\overrightarrow{v}_{e}$. \\
 Ici $\overrightarrow{v'} = \overrightarrow{0}$. \\
 Dans l'ARQS magnétique : $\overrightarrow{B} = \overrightarrow{B'}$
-; il vient : $q\overrightarrow{E}+q\overrightarrow{v}_{e} \times
-\overrightarrow{B} = q\overrightarrow{E'}$. \\
+; il vient : $q\overrightarrow{E}+q\overrightarrow{v}_{e} \wedge \overrightarrow{B} = q\overrightarrow{E'}$. \\
 Dans l'ARQS magnétique, on retiendra donc que : \\
 \centerline{\mathcolorbox{gray!20}{\overrightarrow{E'}=\overrightarrow{E}+\overrightarrow{v}_{e}
-\times \overrightarrow{B}}}.
+\wedge \overrightarrow{B}}}.
 
 \subsection*{3. Champ électromoteur de Lorentz et force électromotrice
 de Lorentz} \textbf{ a)  Définitions :} \\
 On définit (au sens de Lorentz) le champ électromoteur par
-: \mathcolorbox{gray!20}{\overrightarrow{E}_{m}=\overrightarrow{v}_{e}\times
-\overrightarrow{B}}.
+: \mathcolorbox{gray!20}{\overrightarrow{E}_{m}=\overrightarrow{v}_{e}\wedge \overrightarrow{B}}.
 \\
 La définition de la fem induite est inchangée par rapport à celle introduite au sens de Neumann : \\
 \centerline{\mathcolorbox{gray!20}{e=\oint_{M\in
@@ -498,7 +496,7 @@ Le circuit subit des actions mécaniques dont la résultante (dite des
 actions de Laplace) ou plus simplistement "force de Laplace" a pour
 expression : \\
 \centerline{\mathcolorbox{gray!20}{\overrightarrow{F}_{L} = \oint_{M \in
-\Gamma}i\overrightarrow{\mathrm{d}\ell}(M) \times \overrightarrow{B}(M,t)}}.
+\Gamma}i\overrightarrow{\mathrm{d}\ell}(M) \wedge \overrightarrow{B}(M,t)}}.
 \\
 \textbf{Dans cette expression, le déplacement élémentaire le long du
 circuit est de même sens que l'intensité du courant.}
@@ -540,7 +538,7 @@ barre.}\label{Fig.4}
 Laplace s'exerçant sur le circuit de contour $\Gamma$ se ramène à
 celle s'exerçant sur le seul barreau : \\
 $\overrightarrow{F} = \oint_{M\in
-\Gamma}i(t)\overrightarrow{\mathrm{d}\ell}(M)\times \overrightarrow{B} =
+\Gamma}i(t)\overrightarrow{\mathrm{d}\ell}(M)\wedge \overrightarrow{B} =
 i\int_{A}^{C}\left[\mathrm{d}y\overrightarrow{u}_{y}\right] \times
 \left[B\overrightarrow{u}_{z}\right] = i\ell B \overrightarrow{u}_{x}$. \\
 Calculons la fem induite. \textit{A priori} le circuit se déformant,
@@ -548,8 +546,7 @@ on ne peut pas appliquer la loi de Faraday pour calculer la fem
 induite. \\
 On la calcule directement par circulation du champ électromoteur de
 Lorentz\footnote{Il y a ici un petit "hic" ... Lequel ?} :
-$\overrightarrow{E}_{m} = \overrightarrow{v}\times
-\overrightarrow{B} = -vB\overrightarrow{u}_{y}$ (avec
+$\overrightarrow{E}_{m} = \overrightarrow{v}\wedge \overrightarrow{B} = -vB\overrightarrow{u}_{y}$ (avec
 $\overrightarrow{v}=\overrightarrow{v}_{e}$ la vitesse du barreau
 qui est encore la vitesse d'entraînement du référentiel relatif,
 référentiel lié au barreau qui est en mouvement de translation par
@@ -706,21 +703,18 @@ relatif (R') : $\overrightarrow{v}'=\overrightarrow{0}$):
 \\
 \centerline{\mathcolorbox{gray!20}{e(t) = \oint_{M\in
 \Gamma}\overrightarrow{E}.\overrightarrow{\mathrm{d}\ell}(M)+\oint_{M\in
-\Gamma}\left[\overrightarrow{v}_{e}\times
-\overrightarrow{B}\right].\overrightarrow{\mathrm{d}\ell}(M)}}. \\
+\Gamma}\left[\overrightarrow{v}_{e}\wedge \overrightarrow{B}\right].\overrightarrow{\mathrm{d}\ell}(M)}}. \\
 A l'aide du théorème de Stokes (en utilisant les conventions
 d'orientation habituelles, $S$ surface ouverte s'appuyant sur le
 contour $\Gamma$), on a : $e(t) = \iint_{P\in
 S}\rot \overrightarrow{E}.\overrightarrow{\mathrm{d}S}(P)+\oint_{M\in
-\Gamma}\left[\overrightarrow{v}_{e}\times
-\overrightarrow{B}\right].\overrightarrow{\mathrm{d}\ell}(M)$. \\
+\Gamma}\left[\overrightarrow{v}_{e}\wedge \overrightarrow{B}\right].\overrightarrow{\mathrm{d}\ell}(M)$. \\
 Enfin, à l'aide de l'équation de Maxwell-Faraday, on obtient
 l'expression la plus générale de la fem induite :
 \begin{eqnarray}\label{Eq.60}
 e(t) = -\iint_{P\in S}\frac{\partial\overrightarrow{B}}{\partial
 t}(P,t).\overrightarrow{\mathrm{d}S}(P) +\oint_{M\in
-\Gamma}\left[\overrightarrow{v}_{e}\times
-\overrightarrow{B}\right].\overrightarrow{\mathrm{d}\ell}(M).
+\Gamma}\left[\overrightarrow{v}_{e}\wedge \overrightarrow{B}\right].\overrightarrow{\mathrm{d}\ell}(M).
 \end{eqnarray}
 
 \subsection*{2. Cas limites des inductions de Neumann et Lorentz comme
@@ -735,8 +729,7 @@ loi de Faraday est licite.
 \item Si $\frac{\partial \overrightarrow{B}}{\partial t} =
 \overrightarrow{0}$, on est dans le cadre de l'induction de Lorentz;
 l'équation (\ref{Eq.60}) devient : $e(t) = \oint_{M\in
-\Gamma}\left[\overrightarrow{v}_{e}\times
-\overrightarrow{B}\right].\overrightarrow{\mathrm{d}\ell}(M)$.
+\Gamma}\left[\overrightarrow{v}_{e}\wedge \overrightarrow{B}\right].\overrightarrow{\mathrm{d}\ell}(M)$.
 \end{itemize}
 
 \subsection*{3. Loi de Faraday dans les circuits de constitution rigide en translation rectiligne uniforme par rapport (R)}
@@ -745,8 +738,7 @@ On peut montrer\footnote{Démonstration sur le site dans les additifs
 $\Gamma$ est rigide durant son déplacement, on a : $e(t) =
 -\iint_{P\in S}\frac{\partial\overrightarrow{B}}{\partial
 t}(P,t).\overrightarrow{\mathrm{d}S}(P) +\oint_{M\in
-\Gamma}\left[\overrightarrow{v}_{e}\times
-\overrightarrow{B}\right].\overrightarrow{\mathrm{d}\ell}(M) =
+\Gamma}\left[\overrightarrow{v}_{e}\wedge \overrightarrow{B}\right].\overrightarrow{\mathrm{d}\ell}(M) =
 -\frac{\mathrm{d}}{\mathrm{d}t}\iint_{P\in
 S}\overrightarrow{B}(P,t).\overrightarrow{\mathrm{d}S}(P) = -\frac{\mathrm{d}\Phi}{\mathrm{d}t}(t)$ : la loi de Faraday demeure licite.
 

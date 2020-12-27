@@ -29,6 +29,7 @@ fs.readdir("./tex_files/", (err, files) => {
         par = par.replace(/\\textbf\{([a-z])(\.|\)) *((.|\r?\n?)*?)\}( |(\r?\n?))?(\\\\)?/g, "\\subsubsection*{$1) $3}")
 
         par = par.replace(/ :/g, " :")
+        par = par.replace(/\$\\times\$ désigne/g, "$$\\wedge$$ désigne")
 
         //REPLACER DE MATHS
         function replacer(match, p1, p2, p3, p4, p5, offset, string) {
@@ -44,6 +45,7 @@ fs.readdir("./tex_files/", (err, files) => {
             p3 = p3.replace(/(?<!\\([a-z]|[A-Z])*)d/gm, "\\mathrm{d}") //MATHRM D PTN
             p3 = p3.replace(/(?<!\\(([a-z]|[A-Z])*|(mathcal{)))D/gm, "\\mathrm{D}")
             p3 = p3.replace(/(cte|cste)/g, "\\mathrm{$1}")
+            p3 = p3.replace(/\\times( |\r?\n?)\\overrightarrow/g, "\\wedge \\overrightarrow")
             return `${p1}${p2}${p3}${p5}`;
         }
 
