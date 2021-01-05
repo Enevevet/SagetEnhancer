@@ -72,7 +72,7 @@ fs.readdir("./tex_files/", (err, files) => {
         par = par.replace(/\\fbox{\$((.|\n|\r)*?)\$/gims, "\\mathcolorbox{gray!20}{$1")
 
         //Écriture dans le fichier
-        fs.writeFile(`./results/${file}`, par, (err) => {
+        fs.writeFile(`./tex_results/${file}`, par, (err) => {
             if (err) throw err;
         });
     });
