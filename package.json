@@ -16,6 +16,7 @@
   "author": "Enevevet",
   "license": "ISC",
   "dependencies": {
-    "fs": "0.0.1-security"
+    "fs": "0.0.1-security",
+    "node-latex": "^3.0.0"
   }
 }
