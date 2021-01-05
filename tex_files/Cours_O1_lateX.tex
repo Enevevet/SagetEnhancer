@@ -1,0 +1,403 @@
+\documentclass[review,5p,fleqn]{elsarticle}
+\def\bibsection{\section*{References}}
+\usepackage[T1]{fontenc}
+%% \usepackage[french]{babel}
+\usepackage{epsfig}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\setlength{\mathindent}{0cm}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{floatflt}
+\usepackage{esint}
+\usepackage{enumitem}
+\usepackage{frcursive}
+%% \usepackage{amsrefs}
+
+\newtheorem{thm}{Theorem}
+\newtheorem{lem}[thm]{Lemma}
+\newdefinition{rmk}{Remark}
+\newproof{pf}{Proof}
+\newproof{pot}{Proof of Theorem \ref{thm2}}
+
+%% The amssymb package provides various useful mathematical symbols
+%%\usepackage{amssymb}
+%% The amsthm package provides extended theorem environments
+%% \usepackage{amsthm}
+%% The lineno packages adds line numbers. Start line numbering with
+%% \begin{linenumbers}, end it with \end{linenumbers}. Or switch it on
+%% for the whole article with \linenumbers.
+%% \usepackage{lineno}
+
+\begin{document}
+\begin{frontmatter}
+\title{Modèle scalaire de la lumière (O1)}
+\author{par Guillaume Saget, professeur de Sciences Physiques en MP, Lycée Champollion}
+\begin{abstract}
+Je propose ici le cours O1 qui vient apporter les réponses au
+support de cours éponyme.
+\end{abstract}
+\end{frontmatter}
+
+\section*{III. Le modèle du train d'onde(s) non amorti}
+\subsection*{3) Définitions}
+\subsection*{d) Relation entre largeur spectrale $\Delta \lambda_{0}$ et longueur de cohérence $\ell_{c}$}
+\noindent Dans le vide, $\nu = \frac{c}{\lambda_{0}}$ ; on
+différentie
+cette relation : $d\nu = -c\frac{d\lambda_{0}}{\lambda_{0}^{2}}$. \\
+On passe enfin en variations finies : $d\nu \rightarrow \Delta \nu$
+; $-c\frac{d\lambda_{0}}{\lambda_{0}^{2}} \rightarrow c\frac{\Delta
+\lambda_{0}}{\lambda_{0}^{2}}$. \\
+Il s'ensuit que : $\Delta \nu = c\frac{\Delta
+\lambda_{0}}{\lambda_{0}^{2}}$. \\
+On exploite enfin la relation caractéristique des paquets
+d'onde(s) : $\Delta t \Delta \nu \approx 1$. \\
+On en déduit immédiatement que : \fbox{$\Delta t \approx
+\frac{\lambda_{0}^{2}}{c\Delta \lambda_{0}}$} et la longueur de
+cohérence par : \fbox{$\ell_{c} = c\Delta t =
+\frac{\lambda_{0}^{2}}{\Delta \lambda_{0}}$}. \\
+\underline{Ordre de grandeur de $\Delta \lambda_{0}$ pour une source
+spectrale} ($\Delta t \approx 10^{-11}$ s) : pour $\lambda_{0} \sim
+6\times 10^{-7}$ m, $\Delta \lambda_{0} \sim \frac{(6\times
+10^{-7})^{2}}{3\times 10^{8}\times 10^{-11}} \sim \frac{4\times
+10^{-13}}{3\times 10^{-3}} \sim 10^{-10}$ m.
+
+\section*{IV. Notion de rayon lumineux}
+\subsection*{3) Rayon lumineux}
+Un rayon lumineux $(\Gamma)$ issu de la source ponctuelle $S$ et
+atteignant le point $M$ est représenté sur la figure \ref{Fig.2}.
+\begin{figure}[h]
+\begin{center}
+\epsfig{file=Fig2.eps,height=1.7cm, width=6.5cm}
+\end{center}
+\caption{Représentation d'un rayon lumineux $(\Gamma)$ dans un
+milieu transparent (inhomogène).}\label{Fig.2}
+\end{figure}
+
+\section*{V. Modèle scalaire}
+\subsection*{2) Représentation mathématique d'un champ scalaire décrivant une onde lumineuse}
+Le champ vibratoire issu de la source ponctuelle $S$ atteint à une
+date $t$ un quelconque point $M$ de l'espace ; en ce point, le champ
+vibratoire est : \\
+\fbox{$a(M,t) = A(M)\cos(\omega t -\varphi_{M})$}
+avec
+$\varphi_{M}$ la phase instantanée à l'origine en $M$. \\
+Cette expression est licite pour les sources ponctuelles
+monochromatiques ou quasi-monochromatiques.
+
+\section*{VI. Chemin optique}
+\subsection*{1) Définition}
+Le chemin optique entre la source ponctuelle $S$ et un quelconque
+point $M$ de l'espace est défini par : \\
+\fbox{$L_{SM} = (SM) = \int_{P \in (\Gamma)}n(P)\overline{d\ell}(P)
+= \int_{S}^{M}n(P)\overline{d\ell}(P)$} avec $n(P)$ l'indice optique
+du matériau en $P$ et $\overline{d\ell}$ un petit déplacement
+élémentaire issu de $P$ le long du rayon lumineux $(\Gamma)$.
+\begin{figure}[h]
+\begin{center}
+\epsfig{file=Fig1.eps,height=1.7cm, width=6.5cm}
+\end{center}
+\caption{Représentation d'un rayon lumineux $(\Gamma)$ dans un
+milieu transparent (inhomogène). Sur la figure,
+$\overline{d\ell}(P)=\overline{PP'}>0$.}\label{Fig.1}
+\end{figure}
+Dans un milieu homogène, $\forall P$, $n(P)=n$, d'où : \fbox{$(SM)
+= nSM$}. \\
+En outre, dans un milieu homogène, la propagation de la lumière se
+faisant de façon rectiligne, le chemi optique $(SM) = nSM$ est donc
+le produit de l'indice du milieu par le segment $[SM]$.
+\\
+\underline{Théorèmes fondamentaux:}
+\begin{itemize}
+\item Démontrons le théorème n$^{\circ}1$ (théorème de Chasles sur le
+chemin) optique. \\
+On écrit : $(SM) = \int_{P \in (\Gamma)}n(P)\overline{d\ell}(P)$.
+Considérons un point $P' \in (\Gamma)$ atteint par la lumière entre
+$S$ et $M$ ; on écrit dès lors : $(SM) =\int_{S}^{M}
+n(P)\overline{d\ell}(P) = \int_{S}^{P'}
+n(P)\overline{d\ell}(P)+\int_{P'}^{M} n(P)\overline{d\ell}(P) =
+(SP')+(P'M)$.
+\item \underline{Conséquence du théorème n$^{\circ}2$ :} \\
+On écrit $(SM) = \int_{S}^{M} n(P)\overline{d\ell}(P) = \int_{S}^{M}
+n(P)\overline{PP'}$ avec $P'$
+point voisin appartenant au rayon lumineux. \\
+Or, $(SM) = \int_{S}^{M} n(P)\overline{d\ell}(P) = -\int_{M}^{S}
+n(P)\overline{PP'}$. \\
+En vertu du principe inverse de la lumière, $M$ devient le point
+source et $S$ un point de l'espace atteint par la lumière depuis $M$
+en suivant le rayon lumineux $(\Gamma)$. Changeons le sens positif
+retenu pour la propagation de la lumière ; le sens positif retenu
+maintenant est celui allant de $M$ à $S$. \\
+On écrit ($\overline{PP'} = -\overline{P'P}$) : $(SM) = \int_{S}^{M}
+n(P)\overline{d\ell}(P) = -\int_{M}^{S} n(P)\overline{PP'} =
+\int_{M}^{S}
+n(P)\overline{P'P}$. \\
+Posons $\overline{P'P} = \overline{d\ell}(P') >0$. Comme $P'$ est
+voisin de $P$, on a $n(P) \approx n(P')$. Il vient :
+\\
+$(SM) = \int_{S}^{M} n(P)\overline{d\ell}(P) = \int_{M}^{S}
+n(P)\overline{P'P}$ \\ $= \int_{M}^{S}
+n(P)\overline{d\ell}(P')\approx \int_{M}^{S}
+n(P')\overline{d\ell}(P')=(MS)$.
+\end{itemize}
+
+\subsection*{2)  Application au champ scalaire décrivant l'onde
+lumineuse}
+\begin{itemize}
+\item \underline{Cas général :} La phase de l'onde en $M$ à la date
+$t$ est celle de la source ponctuelle $S$ à la date $t -$ \textit{la
+durée mis par l'onde pour aller de} $S$ à $M$ ; notons $\tau$ cette
+durée. On écrit : \\
+$\Phi(M,t) = \Phi(S,t-\tau)$. Or, $\Phi(M,t) = \omega t
+-\varphi_{M}$ et $\Phi(S,t) = \omega t -\varphi_{S}$. On en déduit
+que : $\Phi(M,t) = \omega t -\varphi_{M} = \Phi(S,t-\tau) = \omega t
+-\omega \tau -\varphi_{S}$. On en déduit que :  \fbox{$\varphi_{M} =
+\varphi_{S}+\omega \tau$}. \\
+Le champ vibratoire (la source $S$ est monochromatique ou
+quasi-monochromatique) en $M$ à $t$ est : $a(M,t) = A(M)\cos(\omega
+t -\varphi_{M}) = A(M)\cos(\omega t -
+\omega \tau -\varphi_{S})$. \\
+Or, on montrera en exercice que : \fbox{$\tau = \frac{(SM)}{c}$}. \\
+Finalement, $a(M,t) = A(M)\cos(\omega t -
+\frac{\omega}{c}(SM)-\varphi_{S})$. En posant $k_{0} =
+\frac{\omega}{c}$ le nombre d'onde dans le vide, on a :
+\fbox{$a(M,t) = A(M)\cos(\omega t -
+\frac{\omega}{c}(SM)-\varphi_{S})$}. \\
+Introduisons encore la longueur d'onde dans le vide (ou période
+spatiale du champ vibratoire dans le vide) définie à partir de
+$k_{0}$ par : $k_{0} = \frac{\omega}{c} = \frac{2\pi}{\lambda_{0}}$.
+\item Dans un milieu transparent homogène, $(SM) = nSM$. Il vient :
+\fbox{$a(M,t) = A(M)\cos(\omega t - nk_{0}SM-\varphi_{S})$}. \\
+Posons $k = k_{0}n = \frac{\omega}{c}n$ le nombre d'onde dans le
+milieu. Il vient : \fbox{$a(M,t) = A(M)\cos(\omega t -
+kSM-\varphi_{S})$}. \\
+Introduisons enfin $\lambda$ la longueur d'onde dans le milieu
+définie à partir de $k$ par : $k = \frac{2\pi}{\lambda}$. On en
+déduit que : $\lambda = \frac{2\pi}{k} =
+\frac{2\pi}{nk_{0}}=\frac{\lambda_{0}}{n}$.
+\end{itemize}
+
+\section*{VII. Surface d'onde et théorème de Malus-Dupin}
+\subsection*{2) Théorème de Malus-Dupin (admis)}
+Exemple d'application du théorème de Malus-Dupin (en lien avec
+l'exercice n$^{\circ}$8) du TD O1. \\
+En veru du principe du retour inverse de la lumière, $M_{\infty}$
+est un point source. Loin de ce point, les surfaces d'ondes sont des
+plans. En vertu du théorème de Malus-Dupin, les rayons lumineux sont
+orthogonaux aux plans d'ondes : $(\Sigma)$ est un plan d'onde issu
+de $M$ : $(M_{\infty}H) = (M_{\infty}K)$ mais $(SIH) \neq (SIJK)$ :
+$(\Sigma)$ bien qu'orthogonal aux rayons émergents de la lame de
+verre n'est pas une surface d'ondes issue de $S$. En effet, le rayon
+noir émergeant de la lame de verre subit une réflexion tandis que le
+rayon en rouge sortant de la lame de verre a subi deux réfractions
+et une réflexion : les points $H$ et $K$ $\in (\Sigma)$
+n'appartiennent pas à la même surface d'ondes issue de $S$.
+
+\section*{VIII. Intensité lumineuse ou éclairement}
+\subsection*{2)  Définition de l'éclairement ou de l'intensité
+lumineuse} Décomposons l'intervalle $\tau_{d}$ en un nombre
+quasi-entier $N$ d'intervalles de durée identique $T$ (période
+temporelle des signaux ; $T\sim 10^{-15}$ s, $\tau_{d} \sim 10^{-6}$
+s pour une photodiode, donc $N \sim 10^{9}$) : $\tau_{d} \approx
+NT$. Il vient :
+\begin{eqnarray}\label{Eq.1}
+I(M) &=& 2A^{2}(M)<\cos^{2}(\omega t
+-k_{0}(SM)-\varphi_{S})>_{\tau_{d}} \notag \\
+&=& 2A^{2}(M)\times
+\frac{1}{\tau_{d}}\int_{0}^{\tau_{d}}\cos^{2}(\omega t
+-k_{0}(SM)-\varphi_{S})dt \notag \\
+\end{eqnarray}
+Il faut distinguer le cas des sources moncohromatiques et
+quasi-monochromatiques.
+\begin{itemize}
+\item Considérons tout d'abord le cas des sources monochromatiques. La
+phase $\varphi_{S} = cste$ pour tout $t$. L'équation (\ref{Eq.1})
+devient :
+\begin{eqnarray*}
+I(M) \approx \frac{2A^{2}(M)}{NT}\times
+\sum_{k=1}^{N}\int_{(k-1)T}^{kT}\cos^{2}(\omega t
+-k_{0}(SM)-\varphi_{S})dt.
+\end{eqnarray*}
+Or, du fait de la constante de $\varphi_{S}$, $\forall k \in
+[1,\,N]$, $\int_{(k-1)T}^{kT}\cos^{2}(\omega t
+-k_{0}(SM)-\varphi_{S})dt = \int_{0}^{T}\cos^{2}(\omega t
+-k_{0}(SM)-\varphi_{S})dt$. Il vient que :
+\begin{eqnarray}\label{Eq.2}
+I(M) &\approx& \frac{2A^{2}(M)}{NT}\times
+(N\int_{0}^{T}\cos^{2}(\omega t -k_{0}(SM)-\varphi_{S})dt) \notag \\
+&=& \frac{2}{T}\int_{0}^{T}A^{2}(M)\cos^{2}(\omega t
+-k_{0}(SM)-\varphi_{S})dt \notag \\
+&=& <2a^{2}(M,t)>_{T}.
+\end{eqnarray}
+\item Considérons maintenant le cas des sources quasi-mono-chromatiques. La
+phase $\varphi_{S} = cste$ seulement à l'échelle de $\Delta t$
+(temps de cohérence temporelle de la source). Ceci dit, comme $T <<
+\Delta t$, à l'échelle d'une période temporelle, $\varphi_{S}$
+demeure quasi-constant. L'équation (\ref{Eq.2}) est donc encore
+licite ici et le résultat est le même que dans le cas des sources
+monochromatiques.
+\end{itemize}
+Montrons maintenant que $I(M) = A^{2}(M)$. Pour ce faire, il suffit
+de linéariser : \\
+$\cos^{2}(\omega t - k_{0}(SM) - \varphi_{S}) =
+\frac{1+\cos(2\omega t - 2k_{0}(SM) - 2\varphi_{S})}{2}$. \\
+Or, $\int_{0}^{T}\cos(2\omega t - 2k_{0}(SM) - 2\varphi_{S})dt =
+\frac{[\sin(2\omega t - 2k_{0}(SM) -
+2\varphi_{S})]_{0}^{T}}{2\omega} = 0$. On en déduit que : \\
+$I(M)\approx 2<a^{2}(M,t)>_{T} = \frac{2}{T}\times
+A^{2}(M)\int_{0}^{T}\frac{dt}{2} = A^{2}(M)$.
+
+\section*{IX. Onde sphérique et onde plane dans un milieu homogène}
+\subsection*{ 1)  Onde sphérique}
+Le champ vibratoire en un point $M$ (l'onde émise est issue d'une
+source ponctuelle sphérique monochromatique ou
+quasi-monochromatique) est : \\
+\fbox{$a(M,t) = \frac{A_{0}}{r}\cos(\omega t -nk_{0}r
+-\varphi_{S})$} avec $SM = r$. On peut poser $ k = k_{0}n$
+le nombre d'onde dans le vide. $A_{0}$ est une constante et $A(M) = A(r) = \frac{A_{0}}{r}$ est l'amplitude de l'onde. On a alors : \\
+\fbox{$a(M,t) = \frac{A_{0}}{r}\cos(\omega t -kr -\varphi_{S})$}. \\
+La démonstration sera faite en TD.
+
+\subsection*{2)  Onde plane}
+Loin de la source ponctuelle $S$ ponctuelle  monochromatique ou
+quasi-monochromatique, les surfaces d'ondes sont quasiment planes ;
+le champ vibratoire de l'onde plane en un point $M$ est : \\
+\fbox{$a(M,t) = A_{0}\cos(\omega t
+-n\overrightarrow{k}_{0}.\overrightarrow{OM} - \varphi_{O})$}. \\
+$\varphi_{O}$ est la phase isntantanée à l'origine en un point $O$
+de l'espace très éloigné de la source $S$ (la démonstration sera
+faite en TD). En introduisant le vecteur d'onde dans le milieu
+défini par : $\overrightarrow{k} = n\overrightarrow{k}_{0} =
+n\frac{\omega}{c}\overrightarrow{u}$ avec $\overrightarrow{u}$ un
+vecteur unitaire donnant le sens de propagation des rayons lumineux
+(la propagation est rectiligne dans un milieu homogène), le champ
+vibratoire est : \\
+\fbox{$a(M,t) = A_{0}\cos(\omega t
+-\overrightarrow{k}.\overrightarrow{OM} - \varphi_{O})$}.
+
+\section*{X. Applications du théorème de Malus-Dupin (A SAVOIR)}
+\subsection*{1)  Effet d'une lentille mince dans l'approximation de Gauss (stigmatisme
+approché)} Soit une source ponctuelle $S_{\infty}$ à l'infini dans
+la direction de l'axe optique. La lentille mince (L) conjugue ce
+point au foyer image $F'$ ; on écrit : $S_{\infty}
+$ $\underleftrightarrow{(L)}$ $F'$. \\
+Loin de $S_{\infty}$, les surfaces d'ondes sphériques sont quasiment
+planes : en vertu du théorème de Malus-Dupin, les rayons lumineux
+sont orthogonaux aux plans d'ondes. \\
+Après passage par la lentille, les rayons convergent vers le foyer
+image $F'$. \\
+En vertu du principe du retour inverse de la lumière,
+$F'$ est une source ponctuelle émettant des ondes sphériques. Les
+rayons lumineux sont orthogonaux aux surfaces d'ondes (via le
+théorème de Malus-Dupin).
+\\
+Ainsi, la lentille mince dans cette configuration transforme des
+plans d'ondes en ondes sphériques et réciproquement (via le principe
+du retour inverse de la lumière).
+
+\subsection*{3) Exemples de travail}
+\noindent \underline{Premier exemple :} Soit une source ponctuelle
+$S_{\infty}$ à l'infini. La lentille mince (L) conjugue ce point au
+point  $M$ ; on écrit : $S_{\infty} $ $\underleftrightarrow{(L)}$
+$M$. Dans les conditions de Gauss (on est dans le cadre du
+stigmatisme approché), $(S_{\infty}HIM) = (S_{\infty}JM)$. \\
+Décomposons les chemins optiques, $(S_{\infty}HIM) =
+(S_{\infty}H)+(HIM)$ et $(S_{\infty}JM) = (S_{\infty}J)+(JM)$. \\
+Il vient : $(S_{\infty}H)+(HIM) = (S_{\infty}J)+(JM)$. \\
+Or, loin de $S_{\infty}$, les surfaces d'ondes sont des plans d'onde
+issus de $S_{\infty}$ : $(S_{\infty}H) = (S_{\infty}J)$. On en
+déduit que : \fbox{$(HIM) = (JM)$}. \\
+En vertu du principe du retour inverse de la lumière, $M$ est une
+source ponctuelle avec \fbox{$(MIH) = (MJ)$}. \\
+\noindent \underline{Second exemple :} Par la lentille mince
+convergente (LMC), le point $M$ est conjugué à un point $S_{\infty}$
+: $S_{\infty} $
+$\underleftrightarrow{(L)}$ $M$. \\
+Dans les conditions de Gauss (on
+est dans le cadre du
+stigmatisme approché), $(S_{\infty}S_{1}H'HIM) = (S_{\infty}S_{2}KJ'JM)$. \\
+Or, loin de $S_{\infty}$, les surfaces d'ondes sont des plans d'onde
+issus de $S_{\infty}$ : en particulier $(\Sigma'')$, ($\Sigma')$ et
+$(\Sigma)$ sont des plans d'onde issues de $S_{\infty}$. Les rayons
+lumineux sont orthogonaux à tous ces plans via le théorème de
+Malus-Dupin ($S_{1}$ et $K \in (\Sigma'')$, $H'$ et $J' \in
+(\Sigma')$, $H$ et $J \in (\Sigma)$) :
+\begin{eqnarray}
+(S_{\infty}S_{1}) &=& (S_{\infty}S_{2}K), \label{Eq.101} \\
+(S_{\infty}S_{1}H') &=& (S_{\infty}S_{2}KJ'), \label{Eq.102} \\
+(S_{\infty}S_{1}H'H) &=& (S_{\infty}S_{2}KJ'J). \label{Eq.103}
+\end{eqnarray}
+En décomposant les chemins optiques $(S_{\infty}S_{1}H'HIM) =
+(S_{\infty}S_{1})+(S_{1}H'HIM)$ et $(S_{\infty}S_{2}KJ'JM) =
+(S_{\infty}K)+(KJ'JM)$, on a  : $(S_{\infty}S_{1})+(S_{1}H'HIM) =
+(S_{\infty}S_{2}K)+(KJ'JM)$. Or, avec l'équation (\ref{Eq.101}), il
+vient : $(S_{1}H'HIM) = (KJ'JM)$. \\
+De même, en décomposant les chemins optiques $(S_{\infty}S_{1}H'HIM)
+= (S_{\infty}S_{1}H')+(H'HIM)$ et $(S_{\infty}S_{2}KJ'JM) =
+(S_{\infty}S_{2}KJ')+(J'JM)$, on a  : $(S_{\infty}S_{1}H')+(H'HIM) =
+(S_{\infty}S_{2}KJ')+(J'JM)$. Or, avec l'équation (\ref{Eq.102}), il
+vient : $(H'HIM) = (J'JM)$. \\
+Enfin, en décomposant les chemins optiques $(S_{\infty}S_{1}H'HIM) =
+(S_{\infty}S_{1}H'H)+(HIM)$ et $(S_{\infty}S_{2}KJ'JM) =
+(S_{\infty}KJ'J)+(JM)$, on a  : $(S_{\infty}S_{1}H'H)+(HIM) =
+(S_{\infty}S_{2}KJ'J)+(JM)$. Or, avec l'équation (\ref{Eq.103}), il
+vient : $(HIM) = (JM)$.
+\\
+En résumé, on vient de montrer que :
+\begin{eqnarray}
+(HIM) &=& (JM), \label{Eq.107} \\
+(H'HIM) &=& (J'JM), \label{Eq.108} \\
+(S_{1}H'HIM) &=& (KJ'JM). \label{Eq.109}
+\end{eqnarray}
+En vertu du principe du retour inverse de la lumière, $M$ est un
+point source : $M$ $\underleftrightarrow{(L)}$ $S_{\infty}$. On a :
+\begin{eqnarray}
+(MIH) &=& (MJ), \label{Eq.104} \\
+(MIHH') &=& (MJJ'), \label{Eq.105} \\
+(MIHH'S_{1}) &=& (MJJ'K). \label{Eq.106}
+\end{eqnarray}
+En fait, après passage par la lentille, les rayons issus de $M$
+ayant tous subi deux réfractions dans $(L)$, eu égard au théorème de
+Malus -Dupin, $(\Sigma'')$, $(\Sigma')$ et $(\Sigma)$ sont aussi des
+surfaces d'ondes issues de $M$.
+\\
+La source $S$ est ponctuelle et équidistante des deux trous $S_{1}$
+et $S_{2}$. Le milieu est homogène : $nSS_{1} = nSS_{2}$ ou encore :
+\begin{eqnarray}\label{Eq.100}
+(SS_{1}) = (SS_{2})
+\end{eqnarray}
+$S_{1}$ et $S_{2}$ appartiennent à la même surface d'onde (qui est
+sphérique car $S$ est une source ponctuelle qui émet des ondes
+sphériques dans un milieu homogène) issue de $S$. \\
+Calculons la différence de chemin optique (cette grandeur trouvera
+un intérêt dans le chapitre O2 dédié aux interférences lumineuses)
+$\delta = (SS_{2}KJ'JM) - (SS_{1}H'HIM)$. \\
+On écrit : $(SS_{2}KJ'JM) = (SS_{2})+(S_{2}K)+(KJ'JM)$ et
+$(SS_{1}H'HIM) = (SS_{1})+(S_{1}H'HIM)$. \\
+Avec les équations (\ref{Eq.109}) et (\ref{Eq.100}), on en déduit
+que : \\
+\fbox{$\delta = (S_{2}K)=nS_{2}K$}.
+\\
+\underline{Variante possible :} \\
+$(SS_{2}KJ'JM) = (SS_{2})+(S_{2}K)+(KJ')+ (J'JM)$ et
+$(SS_{1}H'HIM) = (SS_{1})+(S_{1}H')+(H'HIM)$. \\
+Avec les équations (\ref{Eq.108}) et (\ref{Eq.100}), on en déduit
+que : \\
+$\delta = (S_{2}K)+(KJ')-(S_{1}H')$. Or, $S_{1}$ et $K \in
+(\Sigma'')$, $H'$ et $J'\in (\Sigma')$, donc $(S_{1}H') = (KJ')$.
+\\
+Finalement, après implification, on retrouve que : \\
+\fbox{$\delta =
+(S_{2}K)=nS_{2}K$}.
+\\
+\underline{Autre variante possible :} \\
+$(SS_{2}KJ'JM) = (SS_{2})+(S_{2}K)+(KJ'J)+ (JM)$ et \\
+$(SS_{1}H'HIM) = (SS_{1})+(S_{1}H'H)+(HIM)$. \\
+Avec les équations (\ref{Eq.107}) et (\ref{Eq.100}), on en déduit
+que : \\
+$\delta = (S_{2}K)+(KJ'J)-(S_{1}H'H)$. Or, $S_{1}$ et $K \in
+(\Sigma'')$, $H$ et $J\in (\Sigma)$, donc $(S_{1}H'H) = (KJ'J)$.
+\\
+Finalement, après implification, on retrouve que : \\
+\fbox{$\delta = (S_{2}K)=nS_{2}K$}.
+\end{document}

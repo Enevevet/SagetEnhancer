@@ -1,0 +1,314 @@
+\documentclass{article}
+\usepackage{geometry}
+\geometry{a4paper,margin=2cm}
+
+\usepackage{wrapfig}
+
+\everymath{\displaystyle}
+\renewcommand{\epsilon}{\varepsilon}
+%\renewcommand{\epsilon}{\mathchar"122}
+
+\usepackage{esvect}
+\usepackage{wrapfig}
+\usepackage{mathrsfs}
+
+\usepackage{physics}
+
+% (?<!\\Bigg)\)\_
+% <(.*?)>
+% \_\{(?=em)(.*?)\}
+% \\fbox{\$\left((.|\n\right)*?)\$}
+%Â : ?\\\\ ?\n\$\left((.(?!(\\mathcolorbox\right))|\n)*?)\$ ?\.? ?\n?\\\\
+
+\usepackage{xcolor}
+\usepackage{soul}
+\newcommand{\mathcolorbox}[2]{\fcolorbox{black}{#1}{$#2$}}
+
+\DeclareSymbolFont{legacyletters}{OML}{cmm}{m}{it}
+\let\j\relax
+\DeclareMathSymbol{\j}{\mathord}{legacyletters}{"7C}
+
+
+\newcommand{\oneast}{\bigskip\par{\large\centerline{*\medskip}}\par}
+
+
+\usepackage[T1]{fontenc}
+%% \usepackage[french]{babel}
+\usepackage{epsfig}
+\usepackage{graphicx}
+\usepackage{amsmath}
+%\setlength{\mathindent}{0cm}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{float}
+\usepackage{esint}
+\usepackage{enumitem}
+\usepackage{frcursive}
+%\usepackage{fourier}
+%% \usepackage{amsrefs}
+\reversemarginpar
+\newcommand{\asterism}{%
+\leavevmode\marginpar{\makebox[10em][c]{$10^{500}$\makebox[1em][c]{%
+\makebox[0pt][c]{\raisebox{-0.3ex}{\smash{$\star\star$}}}%
+\makebox[0pt][c]{\raisebox{0.8ex}{\smash{$\star$}}}%
+}}}}
+
+\setlength\parindent{0pt}
+
+\let\oldiint\iint
+\renewcommand{\iint}{\oldiint\limits}
+
+\let\oldiiint\iiint
+\renewcommand{\iiint}{\oldiiint\limits}
+
+\let\oldoint\oint
+\renewcommand{\oint}{\oldoint\limits}
+
+\let\oldoiint\oiint
+\renewcommand{\oiint}{\oldoiint\limits}
+
+
+\renewcommand\overrightarrow{\vv}
+\let\oldexp\exp
+\renewcommand{\exp}[1]{\oldexp\left(#1\right)}
+
+\newcommand{\ext}{\text{ext}}
+\newcommand{\cste}{\text{cste}}
+
+%\renewcommand{\div}{\mathrm{div}}
+\let\div\relax
+\DeclareMathOperator{\div}{\mathrm{div}}
+\let\rot\relax
+\DeclareMathOperator{\rot}{\overrightarrow{\mathrm{rot}}}
+\let\grad\relax
+\DeclareMathOperator{\grad}{\overrightarrow{\mathrm{grad}}}
+
+\title{\huge{\textbf{Cours TS1: Les préquels à la Thermodynamique statistique}}}
+\author{par Guillaume Saget, professeur de Sciences Physiques en MP, Lycée Champollion}
+\date{}
+
+\begin{document}\maketitle
+
+
+\begin{abstract}
+Je propose le cours détaille TS1. Le modèle de l'atmosphère
+isotherme est fondamental. Outre son aspect historique à partit
+duquel on introduit le facteur de Boltzmann, il est le point de
+départ de moult modélisations en physique.
+\end{abstract}
+
+
+\subsection*{II - Le modèle d'atmosphère isotherme}
+\subsubsection*{1. Modèle de l'atmosphère isotherme (fluide compressible à
+température constante)} Nous proposons deux approches :
+\begin{itemize}
+\item \underline{\textbf{Première approche :}} une démonstration basée sur la condition d'équilibre mécanique
+d'un quelconque petit élément de volume $\mathrm{d}\mathcal{V}(M)$ de fluide
+via le théorème fondamental de la statique des fluides. \\
+On écrit ainsi : $\grad P(M) =
+\rho(M)\overrightarrow{g}$. \\
+Dans la base de coordonnnées cylindriques, on a par projection selon
+les vecteurs de base ($\overrightarrow{u}_{r},\,
+\overrightarrow{u}_{\mathrm{\theta}},\,\overrightarrow{u}_{z}$) :
+\begin{eqnarray}undefined
+\frac{\partial P}{\partial r}\left(r,\theta,z\right) &=& 0, \label{Eq.1} \\
+\frac{1}{r}\frac{\partial P}{\partial \theta}\left(r,\theta,z\right) &=& 0, \label{Eq.2} \\
+\frac{\partial P}{\partial z}\left(r,\theta,z\right) &=& -\rho g. \label{Eq.3}
+\end{eqnarray}
+Des équations (\ref{Eq.1}) et (\ref{Eq.2}), on déduit que $P(M) =
+P(z)$. \\
+L'équation (\ref{Eq.3}) devient : $\mathrm{d}P(z) = -\rho g \mathrm{d}z$. \\
+Or, le fluide (air atmosphérique) est compressible (son coefficient
+de compressibilité isotherme n'est pas nul et vaut dans le modèle du
+gaz parfait : $\chi_{T} = -\frac{1}{V}\frac{\partial V}{\partial
+P})_{T} = \frac{1}{P} \sim 10^{-5}$ Pa$^{-1}$ dans les conditions
+standard).
+\\
+\textbf{La masse volumique du gaz n'est donc pas constante
+(typiquement pour un fluide peu compressible, $\chi_{T} \sim
+10^{-10}$ Pa$^{-1}$) !}
+\\
+Dans le modèle du gaz parfait, explicitons la masse volumique du gaz
+: $\rho = \frac{m}{V} = \frac{nM}{V} =
+\frac{PM}{RT}$. \\
+En séparant les variables, l'équation $\mathrm{d}P(z) = -\rho g \mathrm{d}z$ devient :
+$\frac{\mathrm{d}P}{P} = -\frac{Mgz}{RT}$. \\
+Une primitive est : $Ln  P = -\frac{Mgz}{RT}+\mathrm{cste}$, ou encore :
+$P(z) = Ae^{-\frac{Mgz}{RT}}$ avec $A$ une constante à déterminer
+avec une condition aux limites (CL). \\
+La CL est $P(z=0) = P_{0}$ (de l'ordre de la pression standard
+$P^{\circ} = 1,00\times 10^{5}$ Pa). \\
+Il s'ensuit que la loi de variation de pression de l'altitude dans
+le modèle isotherme s'exprime par : \\
+\centerline{\mathcolorbox{gray!20}{P(z) = P_{0}e^{-\frac{Mgz}{RT}}}}. \\
+En introduisant la masse d'une particule de gaz, $m =
+\frac{M}{\mathcal{N}_{A}}$, on aboutit à la formule équivalente : \\
+$P(z) = P_{0}e^{-\frac{mgz}{\frac{R}{\mathcal{N}_{A}}T}}$. \\
+On pose $k_{B} = \frac{R}{\mathcal{N}_{A}} = 1,38\times 10^{-23}$
+J.K$^{-1}$ la constante de Boltzmann. \\
+Finalement, on a : \mathcolorbox{gray!20}{P(z) = P_{0}e^{-\frac{mgz}{k_{B}T}}}.
+\\
+On pose $H = \frac{RT}{Mg} = \frac{k_{B}T}{mg}$ une hauteur
+caractéristique des variations spatiales du champ des pressions. \\
+Typiquement, cette longueur caractéristique donne un ordre de
+grandeur de l'épaisseur de la troposphère. \\
+A.N. Pour $T = 300$ K, \underline{$H$} = $\frac{8,314\times
+300}{2,9\times 10^{-2}\times 9,81}$ $\sim \frac{10\times 3\times
+10^{2}}{3\times 10^{-2}\times 10}$ \underline{$= 10^{4}$ m}.
+\item \underline{\textbf{Seconde approche :}}
+Au préalable, dans la base cartésienne, le champ des pression est de
+la forme $P(M) = P\left(x,y,z\right)$. \\
+Le champ des pressions est invariant par translation selon les axes
+$(Ox)$ et $(Oy)$ d'un quelconque plan horizontal, donc $P(z)$. \\
+Cette seconde approche repose sur la condition d'équilibre mécanique
+d'un petit cylindre de fluide de section $S$, situé entre les
+ordonnées $z$ et $z+\mathrm{d}z$. \\
+Sa masse est : $\mathrm{d}m = \rho S \mathrm{d}z$ avec $\rho$ la masse volumique de
+l'air à l'altitude $z$.
+\\
+
+
+\begin{wrapfigure}{r}{0.25\textwidth}
+\epsfig{file=Fig1.PNG,height=4cm, width=6.6cm}
+\caption\protect{Petit cylindre de fluide en équilibre
+mécanique.}\label{Fig.1}
+\end{wrapfigure}
+
+
+L'axe verical étant commun aux bases cartésienne et cylindrique, on
+conserve $P(z)$. \\
+Ce petit cylindre subit\footnote{Le poids s'applique au centre de
+gravité $G$ du petit cylindre. Celui-ci est situé à l'ordonnée
+$z+\frac{\mathrm{d}z}{2}$ ; ceci dit, comme la masse volumique en $G$ vaut :
+$\rho\left(z+\frac{\mathrm{d}z}{2}\right) \approx \rho(z)+\frac{\mathrm{d}\rho}{\mathrm{d}z}\times
+\frac{\mathrm{d}z}{2} \approx \rho(z)$ : c'est normal ! A l'échelle des
+dimensions axiales du petit cylindre, la masse volumique de l'air
+est quasi-homogène.}
+\begin{itemize}
+\item son poids : $\overrightarrow{\mathrm{d}P} = -\mathrm{d}m g\overrightarrow{u}_{z}$,
+\item La force pressante exercée par l'air sur la section en $z$ :
+$\overrightarrow{F}_{P}(z) = P(z)S\overrightarrow{e}_{z}$,
+\item La force pressante exercée par l'air sur la section en $z+\mathrm{d}z$ :
+$\overrightarrow{F}_{P}(z+\mathrm{d}z) = -P(z+\mathrm{d}z)S\overrightarrow{u}_{z}$,
+\item La résultante des forces de pression $\mathrm{d}\overrightarrow{F}_{\mathrm{lat}}$ sur la surface
+latérale (élémentaire)  du cylindre ; par symétrie de révolution
+autour de l'axe $(Oz)$,
+$\mathrm{d}\overrightarrow{F}_{\mathrm{lat}}=\overrightarrow{0}$ (on en montre la
+nullité par un calcul direct à la fin de ce cours).
+\end{itemize}
+Le cylindre étant à l'équilibre mécanique, on écrit :
+$\overrightarrow{\mathrm{d}P}+\overrightarrow{F}_{P}(z)+\overrightarrow{F}_{P}(z+\mathrm{d}z)
+= \overrightarrow{0}$. \\
+On projette selon l'axe $(Oz)$ : \\
+$-\mathrm{d}mg+P(z)S-P(z+\mathrm{d}z)S = 0$. \\
+A l'aide d'un développement de Taylor à l'ordre 1, on a : $P(z+\mathrm{d}z)
+\approx P(z)+\frac{\mathrm{d}P}{\mathrm{d}z}\mathrm{d}z$. \\
+Par ailleurs (à l'échelle du cylindre, la masse volumique de l'air
+est quasi-homogène de valeur $\rho(z)$ à $\mathrm{d}\rho$ près), $\mathrm{d}m
+= \rho(z)S\mathrm{d}z$. \\
+Dans le modèle du gaz parfait, $\rho(z) = \frac{P(z)M}{RT}$.
+On en déduit que : \\
+$-\frac{P(z)M}{RT}S\mathrm{d}zg -S\frac{\mathrm{d}P}{\mathrm{d}z}(z)\mathrm{d}z=0$, soit : \\
+$\mathrm{d}P = -\frac{P(z)Mg}{RT}\mathrm{d}z$. \\
+En séparant les variables, on a : $\frac{\mathrm{d}P}{P} = -
+\frac{Mg}{RT}\mathrm{d}z$. Une primitive est :
+$P(z) = -\frac{Mgz}{RT}+\mathrm{cste}$. \\
+Le reste du calcul est similaire à l'approche précédente.
+\end{itemize}
+\subsection*{2. Calcul de la masse volumique du fluide en fonction de l'altitude $z$}
+La masse volumique de l'air à l'altitude $z$ est : $\rho(z) =
+\frac{P(z)M}{RT} = \frac{P_{0}M}{RT}e^{-\frac{z}{H}}$ ($\rho(z=0) =
+\frac{P_{0}M}{RT}$ est la masse volumique en $z=0$).
+\\
+A.N. Au niveau de la mer ($z=0$), \underline{$\rho(z=0)$} $=
+\frac{10^{5}\times 2,9\times 10^{-2}}{8,314\times 300} \sim
+\frac{10^{5}\times 3\times 10^{-2}}{10\times 3\times 10^{2}}$
+\underline{$\approx 1$
+kg.m$^{-3}$}. \\
+Au niveau du Mont Everest ($h = 8848$ m, $P(h) = 3,2\times 10^{2}$
+hPa, $T = 2,5\times 10^{2}$ K), le modèle isotherme prédit que la
+masse volumique de l'air vaut :
+ $\rho(z=h) =
+\frac{P(z=0)e^{-\frac{h}{H}}M}{RT}$. \\
+La pression au sommet du mont Everest vaudrait ($h \sim H$) : $P\left(h
+\sim H\right) = P_{0}e^{-1} \sim
+\frac{P_{0}}{3} \sim 3\times 10^{4}$ Pa = $3\times 10^{2}$ hPa. \\
+A.N. \underline{$\rho(z=h)$} $\sim \frac{P_{0}M}{3RT} \sim
+\frac{\rho(z=0)}{3}$ \underline{$\sim 0,3$ kg.m$^{-3}$}. \\
+Le modèle d'atmosphère isotherme donne un bon ordre de grandeur de
+la masse volumique de l'air mais le caractère isotherme de
+l'atmosphère est fantaisiste ! Il faudrait le remplacer par un
+modèle polytropique (à gradient constant de température
+$\frac{\mathrm{d}T}{\mathrm{d}z} = \mathrm{cste}$, à gradient $\frac{\mathrm{d}T}{\mathrm{d}z}$ non constant,
+etc...).
+\subsection*{3. Loi de nivellement barométrique}
+Soit $n^{*}(z)$ la densité particulaire à l'altitude $z$ (c'est le
+nombre de particules d'air par unité de volume) défini par :
+$n^{*}(z) = \frac{\mathrm{d}N}{\mathrm{d}V}$ avec $\mathrm{d}N$ le nombre de particules dans un
+petit volume $\mathrm{d}V$ situé à l'altitude $z$. \\
+On a $\mathrm{d}N =\mathrm{d}N(z) = \mathcal{N}_{A}\mathrm{d}n(z)$ avec $\mathrm{d}n(z)$ la quantité de
+matière correspond à $\mathrm{d}N(z)$. Or, $\mathrm{d}n(z) = \frac{P(z)\mathrm{d}V}{RT}$, d'où
+: $\mathrm{d}N(z) = \frac{P(z)\mathcal{N}_{A}\mathrm{d}V}{RT}$, puis :
+\mathcolorbox{gray!20}{n^{*}(z)=
+\frac{P(z)}{k_{B}T}}. \\
+On en déduit que : $n^{*} = \frac{P(z=0)}{k_{B}T}e^{-\frac{z}{H}}$.
+\\
+On pose $n_{0}^{*} = n(z=0)^{*} = \frac{P_{0}}{k_{B}T}$ la densité
+particulaire au sol. \\
+La formule \mathcolorbox{gray!20}{n^{*}(z) = n_{0}^{*}e^{-\frac{z}{H}}} est appelée
+loi de nivellement barométrique.
+\\
+A.N. \underline{$n_{0}^{*} = \frac{10^{5}}{1,38\times 10^{-23}\times
+3\times 10^{2}} \sim \frac{10^{26}}{3} = 3\times 10^{25}$
+molécules.m$^{-3}$}.
+
+\subsection*{3. Interprétation : facteur de Boltzmann}
+L'idée originelle de Boltzmann est de considérer la densité
+particulaire comme une variable aléatoire à densité. \\
+Ainsi, dans une approche statistique, la probabilité élémentaire
+$\mathrm{d}p(z)$ qu'une particule se trouve dans un petit élément de volume
+d'un cylindre d'air de section $S$ situé entre les
+altitudes $z$ et $z+\mathrm{d}z$ ($\mathrm{d}V(z) = S\mathrm{d}z$) est : \\
+$\mathrm{d}p(z) = \frac{\mathrm{d}N(z)}{N_{\mathrm{tot}}}$ (égal au rapport du nombre favorable
+de cas, c'est-à-dire le nombre $\mathrm{d}N(z) = n^{*}(z)\mathrm{d}V(z) = n^{*}(z)S\mathrm{d}z$
+de paticules dans $\mathrm{d}V(z)=S\mathrm{d}z$ sur le nombre
+total de cas, ici le nombre total de particules de l'atmosphère situées dans un cylindre de section $S$ compris entre les altitudes $z=0$ et $z=H$). \\
+$N_{\mathrm{tot}} = \int_{0}^{H}\mathrm{d}N(z) = S\int_{0}^{z}n^{*}(z)\mathrm{d}z =
+Sn_{0}^{*}\int_{0}^{H}e^{-\frac{z}{H}}\mathrm{d}z$. \\
+Or, dès que $z \sim qq$ $H$, $e^{-\frac{z}{H}} \approx 0$ de sorte
+que : $\int_{0}^{H}n^{*}(z)\mathrm{d}z \approx \int_{0}^{+\infty}n^{*}(z)\mathrm{d}z$.
+\\
+On en déduit que : $N_{\mathrm{tot}} =
+-Sn_{0}^{*}H\left[e^{-\frac{z}{H}}\right]_{0}^{+\infty} = Sn_{0}^{*}H$.
+\\
+Il vient que : $\mathrm{d}p(z) = \frac{n^{*}(z)\mathrm{d}z}{n_{0}^{*}H} =
+\frac{1}{H}e^{-\frac{z}{H}}\mathrm{d}z = \mathrm{cste} \times
+e^{-\frac{mgz}{k_{B}T}}\mathrm{d}z$.
+\\
+Le facteur $e^{-\frac{mgz}{k_{B}T}}$ est appelé facteur de
+Boltzmann. Il met en jeu deux énergies caractéristiques : d'une
+part, l'énergie potentielle de pesanteur d'une particule de masse
+$m$ à l'altitude $z$ : $E_{p} =+mgz$ (l'origine est prise en $z=0$
+et l'axe vertical est ascendant) et $E_{\mathrm{th}} = k_{B}T$ l'énergie
+typique associée à l'agitation thermique des particules du gaz à la
+température $T$ (à
+température ambiante, $E_{\mathrm{th}} \sim 25$ meV). \\
+\textbf{La probabilité de trouver une particule à l'altitude $z$ est
+donc proportionnelle au facteur de Boltzmann.}
+\\
+Le génie de Boltzmann a été de proposer une généralisation de cette
+formule. Le facteur de Boltzmann d'un système microscopique
+possédant l'énergie potentielle $E_{p}$ à l'équilibre thermique avec
+un thermostat à la température $T$ est :
+\mathcolorbox{gray!20}{\text{fa\mathrm{cte}ur \mathrm{d}e Boltzmann} = e^{-\frac{E_{p}}{k_{B}T}}}. \\
+Affaire à suivre dans le cours TS2 ! Le meilleur est à venir ! \\
+\underline{\textbf{Addendum}} : Montrons que la force latérale de
+pression agissant sur le petit cylindre, de section $S$, de rayon de base $r$, est nulle ($\overrightarrow{\mathrm{d}S}_{\mathrm{lat}}=r\mathrm{d}z\mathrm{d}\theta\overrightarrow{u}_{r}$) : \\
+$\overrightarrow{\mathrm{d}F}_{\mathrm{lat}} =
+\int_{0}^{2\pi}P(z)r\mathrm{d}z\mathrm{d}\theta\overrightarrow{u}_{r}\left(\theta\right) = P(z)r\mathrm{d}z\int_{0}^{2\pi}\overrightarrow{u}_{r}\left(\theta\right)\mathrm{d}\theta$. \\
+Or, $\overrightarrow{u}_{r} = \cos\theta
+\overrightarrow{u}_{x}+\sin\theta \overrightarrow{u}_{y}$. \\
+On en déduit que : $\overrightarrow{\mathrm{d}F}_{\mathrm{lat}} =
+P(z)r\mathrm{d}z\left[\int_{0}^{2}\cos\theta \mathrm{d}\theta + \int_{0}^{2\pi}\sin\theta
+\mathrm{d}\theta\right] = \overrightarrow{0}$. CQFD !
+\end{document}

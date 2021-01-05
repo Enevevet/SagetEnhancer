@@ -1,0 +1,819 @@
+\documentclass[review,5p,fleqn]{elsarticle}
+\def\bibsection{\section*{References}}
+\usepackage[T1]{fontenc}
+%% \usepackage[french]{babel}
+\usepackage{epsfig}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\setlength{\mathindent}{0cm}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{floatflt}
+\usepackage{esint}
+\usepackage{enumitem}
+\usepackage{frcursive}
+%% \usepackage{amsrefs}
+
+\newtheorem{thm}{Theorem}
+\newtheorem{lem}[thm]{Lemma}
+\newdefinition{rmk}{Remark}
+\newproof{pf}{Proof}
+\newproof{pot}{Proof of Theorem \ref{thm2}}
+
+%% The amssymb package provides various useful mathematical symbols
+%%\usepackage{amssymb}
+%% The amsthm package provides extended theorem environments
+%% \usepackage{amsthm}
+%% The lineno packages adds line numbers. Start line numbering with
+%% \begin{linenumbers}, end it with \end{linenumbers}. Or switch it on
+%% for the whole article with \linenumbers.
+%% \usepackage{lineno}
+
+\begin{document}
+\begin{frontmatter}
+\title{Interférences lumineuses en lumière non polarisée - Division du front d'ondes (O2)}
+\author{par Guillaume Saget, professeur de Sciences Physiques en MP, Lycée Champollion}
+\begin{abstract}
+Je propose ici le cours O2 qui vient apporter les réponses au
+support de cours éponyme.
+\end{abstract}
+\end{frontmatter}
+
+\section*{I. Interférences entre deux ondes lumineuses}
+\subsection*{6) Superposition de deux ondes émises par deux sources ponctuelles cohérentes : formule d'Augustin Fresnel}
+Je propose ici deux démonstrations.
+\begin{itemize}
+\item \underline{Première démonstration:} \\
+Soient $a_{1}(M,t') = A_{1}(M)\cos(\omega
+t'-k_{0}(S_{1}M)-\varphi_{s1})$ et $a_{2}(M,t') =
+A_{2}(M)\cos(\omega t'-k_{0}(S_{2}M)-\varphi_{s2})$  les champs
+vibratoires des deux sources en M. \\
+On ne restreint en rien la généralité du problème à choisir une
+nouvelle origine des dates telles que : $\omega t = \omega
+t'-\varphi_{s1}$. Il vient : $a_{1}(M,t)=A_{1}\cos(\omega t
+-k_{0}(S_{1}M))$ et $a_{2}(M,t)=A_{2}\cos(\omega t
+-k_{0}(S_{2}M)-\varphi_{0})$ avec $\varphi_{0} =
+\varphi_{s2}-\varphi_{s1}$ le déphasage à l'origine entre les deux
+sources, constant puisque les deux ondes sont cohérentes.
+\\
+Le champ vibratoire en M à la date $t'$ \textbf{des deux ondes
+cohérentes est la somme des champs
+vibratoires}, soit : \fbox{$a(M,t)= a_{1}(M,t)+a_{2}(M,t)$}. \\
+Par définition de l'intensité lumineuse, en notant $\tau_{d}$ le
+temps de réponse du photorécepteur (typiquement $\tau_{d} \sim
+10^{-6}$ s pour une photodiode) $I_{1}(M)=2<a_{1}(M,t)>_{\tau_{d}}$.
+\\
+On a : $I_{1}(M) = 2A_{1}^{2}(M)<\cos^{2}(\omega t
+-k_{0}(S_{1}M))>_{\tau_{d}}$. Décomposons l'intervalle $\tau_{d}$ en
+un nombre quasi-entier $N$ d'intervalles de durée identique $T$
+(période temporelle des signaux ; $T\sim 10^{-15}$ s, $\tau_{d} \sim
+10^{-6}$ s pour une photodiode, donc $N \sim 10^{9}$) : $\tau_{d}
+\approx NT$. Il vient :
+\begin{eqnarray}\label{Eq.1}
+I_{1}(M) &=& 2A_{1}^{2}(M)<\cos^{2}(\omega t
+-k_{0}(S_{1}M))>_{\tau_{d}} \notag \\
+&=& 2A_{1}^{2}(M)\times
+\frac{1}{\tau_{d}}\int_{0}^{\tau_{d}}\cos^{2}(\omega t
+-k_{0}(S_{1}M))dt \notag \\
+&\approx& \frac{2A_{1}^{2}(M)}{NT}\times
+\sum_{k=1}^{N}\int_{(k-1)T}^{kT}\cos^{2}(\omega t -k_{0}(S_{1}M))dt
+\notag
+\\
+\end{eqnarray}
+Or, $\forall k \in [1,\,N]$, $\int_{(k-1)T}^{kT}\cos^{2}(\omega t
+-k_{0}(S_{1}M))dt = \int_{0}^{T}\cos^{2}(\omega t -k_{0}(S_{1}M))dt
+= \frac{T}{2}$ (il suffit de linéariser le
+$\cos^{2}$ pour arriver à ce résultat). \\
+Il s'ensuit que $<\cos^{2}(\omega t -k_{0}(S_{1}M)>_{\tau_{d}} =
+\frac{1}{NT}\times N \times  \int_{0}^{T}\cos^{2}(\omega t
+-k_{0}(S_{1}M))dt = \frac{1}{T}\int_{0}^{T}\cos^{2}(\omega t
+-k_{0}(S_{1}M))dt =$\\ $<\cos^{2}(\omega t -k_{0}(S_{1}M)>_{T} =
+\frac{1}{2}$, puis : \fbox{$I_{1}(M) = A_{1}^{2}(M)$}. \\
+De même (le déphasage $\varphi_{0}$ est constant à l'échelle de
+$\tau_{d}$), donc le calcul est
+similaire), \fbox{$I_{2}(M) = A_{2}^{2}(M)$}. \\
+L'intensité du champ en M est : $I(M) = 2<a^{2}(M,t)>_{\tau_{d}}
+\approx 2<a^{2}(M,t)>_{T} = 2<a_{1}^{2}(M,t)>_{T}+
+2<a_{2}^{2}(M,t)>_{T}+ 4<a_{1}(M,t)a_{2}(M,t)>_{T}$. \\
+Or ($\cos(a)\cos(b) = \frac{1}{2}[\cos(a+b)+\cos(a-b)]$): \\
+$<a_{1}(M,t)a_{2}(M,t)>_{T} =$ \\
+$\frac{1}{T}\times A_{1}(M)A_{2}(M)\int_{0}^{T}\cos(\omega t -
+k_{0}(S_{1}M))\cos(\omega t - k_{0}(S_{2}M)-\varphi_{0})dt$ $=$
+$\frac{1}{2T}\int_{0}^{T}\cos(2\omega t
+-k_{0}[(S_{1}M)+(S_{2}M)]-\varphi_{0})dt$ $+$
+$\frac{1}{2T}\int_{0}^{T}\cos(k_{0}[(S_{2}M)-(S_{1}M)]-\varphi_{0})dt$.
+\\
+Or, $\frac{1}{T}\int_{0}^{T}\cos(2\omega t
+-k_{0}[(S_{1}M)+(S_{2}M)]-\varphi_{0})dt$ $=$ $<\cos(2\omega t
+-k_{0}[(S_{1}M)+(S_{2}M)]-\varphi_{0})>_{T} = 0$ et
+$\frac{1}{T}\int_{0}^{T}\cos(k_{0}[(S_{2}M)-(S_{1}M)]+\varphi_{0})dt$
+$=$ $\cos(k_{0}[(S_{2}M)-(S_{1}M)]+\varphi_{0})$ (ce dernier terme est indépendant du temps). \\
+En posant $\delta =(S_{2}M)-(S_{1}M)$ la différence de marche
+géométrique entre les deux sources en $M$, on en déduit que :
+\\
+$I(M) = I_{1}(M)+I_{2}(M)+2A_{1}(M)A_{2}(M)\cos(k_{0}\delta
++\varphi_{0})$. \\
+Enfin, on sait que : $A_{1}(M)= \sqrt{I_{1}(M)}$ et $A_{2}(M)=
+\sqrt{I_{2}(M)}$, d'où, en posant $\Delta \varphi = k_{0}\delta
++\varphi_{0}$ le déphasage entre les deux ondes en $M$, on obtient
+la mirifique formule de Fresnel associée aux deux sources
+ponctuelles, cohérentes interférant au point $M$ : \\
+\fbox{$I(M)=I_{1}(M)+I_{2}(M)+2\sqrt{I_{1}(M)I_{2}(M)}\cos(\Delta
+\varphi)$}. \\
+Le terme d'intensité corrélant les deux sources est : $I_{12} =
+2\sqrt{I_{1}(M)I_{2}(M)}\cos(\Delta \varphi)$.
+\item \underline{Seconde démonstration:} \\
+En notation complexe, les champs vibratoires sont :
+$\underline{a}_{1}(M,t) = A_{1}e^{i\varphi_{1}}$ avec $\varphi_{1} =
+\omega t -k_{0}(S_{1}M)$ et $\underline{a}_{2}(M,t) =
+A_{2}e^{i\varphi_{2}}$ avec $\varphi_{2} = \omega t
+-k_{0}(S_{2}M)-\varphi_{0}$. \\
+Or, $I_{1}(M) = A_{1}^{2}(M) =
+\underline{a}_{1}(M,t)\underline{a}_{1}^{*}(M,t)=|\underline{a}_{1}|^{2}(M,t)$
+; de même, $I_{2}(M) = A_{2}^{2}(M) =
+\underline{a}_{2}(M,t)\underline{a}_{2}^{*}(M,t)=|\underline{a}_{2}|^{2}(M,t)$.
+\\
+L'intensité $I(M)$ se calcule donc comme suit (Cf. cours O1) : $I(M)
+= \underline{a}(M,t)\underline{a}^{*}(M,t) =
+[\underline{a}_{1}(M,t)+\underline{a}_{2}(M,t)][\underline{a}_{1}^{*}(M,t)+\underline{a}_{2}^{*}(M,t)]
+= I_{1}(M)+I_{2}(M)+
+\underline{a}_{1}(M,t)\underline{a}_{2}^{*}(M,t) +
+\underline{a}_{1}^{*}(M,t)\underline{a}_{2}(M,t)$. \\
+Or, $\underline{z}+\underline{z}^{*} = 2
+\mathcal{R}_{e}(\underline{z})$ avec ici $ \underline{z} =
+\underline{a}_{1}(M,t)\underline{a}_{2}^{*}(M,t) =
+A_{1}(M)A_{2}(M)e^{i(\varphi_{1}-\varphi_{2})}$ $=$
+$\sqrt{I_{1}(M)I_{2}(M)}e^{i(\varphi_{1}-\varphi_{2})}$.
+\\
+Il s'ensuit que : $I(M) = I_{1}(M)+I_{2}(M)+$
+\\ $2\sqrt{I_{1}(M)I_{2}(M)}\cos[\varphi_{1}-\varphi_{2}]$.
+\\
+En remplaçant les phases par leur expression, on retrouve la formule
+de Fresnel à deux ondes cohérentes.
+\end{itemize}
+
+\subsection*{7) Critère expérimental d'obtention d'interférences lumineuses}
+Je propose là encore deux démonstrations.
+\begin{itemize}
+\item \underline{Première démonstration:} Soient $a_{1}(M,t) = A_{1}(M)\cos(\omega
+t-k_{0}(S_{1}M)-\varphi_{s1})$ et $a_{2}(M,t) = A_{2}(M)\cos(\omega
+t-k_{0}(S_{2}M)-\varphi_{s2})$  les champs vibratoires des deux
+sources en M. \\
+Le temps caractéristique de variation des phases à l'origine
+$\varphi_{s1}$ et $\varphi_{s2}$ est $\Delta t$ (temps de cohérence
+temporelle de la source). \\
+Le calcul repart de l'équation (\ref{Eq.1}) ; à l'échelle de $T \sim
+10^{-15}$ s (pour des ondes lumineuses), les phases à l'origine sont
+quasi-constante ($\Delta t \sim  10^{-11}$ s pour des lampes
+spectrales est très grand devant $T$). \\
+Redécoupons la durée $\tau_{d}$ en $N$ intervalles $\tau_{k}$ de
+durée identique $T$. A l'échelle d'un quelconque intervalle de temps
+$\tau_{k}=[(k-1)T,\,kT]$, les phases à l'origine $\varphi_{s1}$ et
+$\varphi_{s2}$ sont  quasi-constantes ($\Delta t >> T$). \\
+Ainsi, écrivons que $\forall k \in [1,\,N]$, $\varphi_{s1} =
+\varphi_{s1,k} = cste_{k}$ et $\forall k \in [1,\,N]$, $\varphi_{s2}
+= \varphi_{s2,k} = cste'_{k}$ avec ici pour tout $t$
+$\varphi_{s1}=\varphi_{s2}$. \\
+Le calcul de l'intensité $I_{1}$ se fait comme suit : \\
+$I_{1}(M) = 2<a_{1}^{2}(M,t>_{\tau_{d}} \approx
+\frac{2A_{1}^{2}}{NT}\sum_{k=1}^{N}\int_{(k-1)T}^{kT}\cos^{2}(\omega
+t -k_{0}(S_{1}M)-\varphi_{s1,k})dt$. \\
+Or, $\forall k \in [1,\,N]$,
+$\frac{1}{T}\int_{(k-1)T}^{kT}\cos^{2}(\omega t
+-k_{0}(S_{1}M)-\varphi_{s1,k})dt$ $=$ $<\cos^{2}(\omega t
+-k_{0}(S_{1}M)-\varphi_{s1,k})>_{\tau_{k}} = \frac{1}{2}$. \\
+On en déduit que $\forall k \in [1,\,N]$ : $<\cos^{2}(\omega t
+-k_{0}(S_{1}M)-\varphi_{s1})>_{\tau_{d}} = \frac{1}{N}\times N
+\times \frac{1}{2}=\frac{1}{2} = <\cos^{2}(\omega t
+-k_{0}(S_{1}M)-\varphi_{s1,k})>_{\tau_{k}}$. \\
+Finalement, $I_{1}(M)=A_{1}^{2}(M)$. De même, $I_{2}(M)=A_{2}^{2}(M)$. \\
+Calculons maintenant le terme de corrélation entre les deux sources : $<a_{1}(M,t)a_{2}(M,t)>_{\tau_{d}} \approx$ \\
+$<a_{1}(M,t)a_{2}(M,t)>_{\tau_{k}}$. \\
+En tenant compte que $\varphi_{s1}
+=\varphi_{s2}$, on écrit : \\
+$<a_{1}(M,t)a_{2}(M,t)>_{\tau_{k}} = \frac{1}{2}\times
+A_{1}(M)A_{2}(M)<\cos(2\omega t -
+k_{0}[(S_{1}M)+(S_{2}M)]-2\varphi_{s1,k})>_{\tau_{k}}$ $+$
+$\frac{1}{2}\times
+A_{1}(M)A_{2}(M)<\cos(k_{0}[(S_{2}M)-(S_{1}M)])>_{\tau_{k}}$. \\
+Du fait que $\varphi_{s1,k}$ est quasi-constant à l'échelle de
+$\tau_{k}$, $<\cos(2\omega t -
+k_{0}[(S_{1}M)+(S_{2}M)]-2\varphi_{s1,k})>_{\tau_{k}} =0$ et
+$<\cos(k_{0}[(S_{2}M)-(S_{1}M)])>_{\tau_{k}} =
+\cos(k_{0}[(S_{2}M)-(S_{1}M)])$. \\
+Finalement, tous calculs
+rassemblés, on obtient
+de nouveau la formule d'interférence à deux ondes de Fresnel (ici $\varphi_{0}=\varphi_{s2}-\varphi_{s1}=0$) : \\
+\fbox{$I(M)=I_{1}(M)+I_{2}(M)+2\sqrt{I_{1}(M)I_{2}(M)}\cos(\Delta
+\varphi)$}.
+\item \underline{Seconde démonstration:} \\
+Les deux sources sont synchrones ; le déphasage entre ces sources
+$\Delta \varphi = k_{0}\delta$ est constant. \\
+Le critère théorique est rempli : les deux sources sont mutuellement
+cohérentes.
+\end{itemize}
+
+\subsection*{11) Contraste}
+L'intensité lumineuse est maximale pour $\Delta \varphi = 2m\pi$
+avec $m \in \mathbb{Z}$ : $I_{max} =
+I_{1}+I_{2}+2\sqrt{I_{1}I_{2}}$. \\
+L'intensité lumineuse est minimale pour $\Delta \varphi = (2m+1)\pi$
+avec $m \in \mathbb{Z}$ : $I_{min} =
+I_{1}+I_{2}-2\sqrt{I_{1}I_{2}}$. \\
+Le calcul du contraste donne : $C =
+\frac{I_{max}-I_{min}}{I_{max}+I_{min}} =
+\frac{2\sqrt{I_{1}I_{2}}}{I_{1}+I_{2}}$. \\
+Le contraste est maximal\footnote{On peut étudier le signe de la
+dérivée $\frac{dC}{dI_{1}}$ à $I_{2}$ fixée (ou $\frac{dC}{dI_{2}}$
+à $I_{1}$ fixée). Tous calculs menés, $\frac{dC}{dI_{1}} =
+\frac{I_{2}}{(I_{1}+I_{2})\sqrt{I_{1}I_{2}}}[I_{2}-I_{1}]$. Elle
+s'annule pour $I_{1}=I_{2}$. Pour $I_{1} < I_{2}$,
+$\frac{dC}{dI_{1}}
+> 0$ ; pour $I_{1} > I_{2}$, $\frac{dC}{dI_{1}}
+< 0$ ; conséquemment, $I_{1}=I_{2}$ est un maximum de $C$.} pour
+$I_{1}=I_{2} = I_{0}$. Dans ce cas, il vaut : \fbox{$C=1$}.
+\\
+Sachant que $2\sqrt{I_{1}I_{2}} = C[I_{1}+I_{2}]$, la formule de
+Fresnel devient : $I(M) = I_{1}+I_{2}+C[I_{1}+I_{2}]\cos\Delta
+\varphi = [I_{1}+I_{2}][1+C\cos\Delta \varphi]$. \\
+Pour $I_{1} = I_{2} = I_{0}$ ($C=1$), la formule de Fresnel prend la
+forme suivante : \fbox{$I(M) = 2I_{0}[1+\cos(\Delta \varphi)]$}.
+
+\subsection*{12) Franges d'interférences}
+\subsection*{a) Définition}
+Pour une frange brillante, $\Delta \varphi = 2m\pi = k_{0}\delta =
+\frac{2\pi \delta}{\lambda_{0}} = 2p\pi$ avec $p$ l'ordre
+d'interférences. On en déduit que pour une frange brillante, $p=m
+\in \mathbb{Z}$ : l'ordre est entier. \\
+Pour une frange sombre, $\Delta \varphi = (2m+1)\pi = k_{0}\delta =
+\frac{2\pi \delta}{\lambda_{0}} = 2p\pi$ avec $p$ l'ordre
+d'interférences. On en déduit que pour une frange sombre,
+$p=m+\frac{1}{2}$ avec $m\in\mathbb{Z}$ : l'ordre est demi-entier.
+
+\subsection*{b) Nature des franges}
+Le lieu des points $M$ tel que $I(M) = cste$ équivaut au lieu des
+points $M$ tel que $\Delta \varphi(M) = cste$ ou encore $\delta (M)
+= (S_{2}M)-(S_{1}M)$ ou encore dans un milieu transparent (l'indice
+est réel) homogène (l'indice ne dépend pas du point $M$)
+$S_{1}M-S_{2}M = cste'$ : il s'agit d'hyperboloïdes de révolution de
+droite $(S_{1}S_{2})$.
+\begin{itemize}
+\item Si l'écran est placé orthogonalement à cette droite, les franges
+sont circulaires ; on dit aussi que ce sont des anneaux
+d'interférences.
+\item Si l'écran est placé "parallèlement" à cette
+droite, les franges sont quasi-rectilignes.
+\end{itemize}
+
+\subsection*{15) Perte de cohérence temporelle}
+\begin{itemize}
+\item Tant que $|\delta(M) < \ell_{c}$, les trains d'ondes se
+superposant en $M$ proviennent du même train d'ondes : $\varphi_{s1}
+= \varphi_{s2}$ pour tout $t$. On est dans le cadre d'application de
+la formule d'interférences de Fresnel à deux ondes cohérentes (les
+sources sont ponctuelles).
+\item Si $|\delta(M) > \ell_{c}$, le
+déphasage à l'origine $\varphi_{0} = \varphi_{s2}-\varphi_{s1}$
+entre les sources n'est plus constant au cours du temps et varie de
+façon aléatoire à l'échelle du temps de réponse du détecteur optique
+: il s'ensuit que le déphasage $\Delta \varphi = k_{0}\delta
++\varphi_{0}$ varie également aléatoirement ; la seconde condition
+du critère théorique de cohérence n'est plus remplie : les deux
+sources ne sont plus cohérentes : on dit que l'on a perte de
+cohérence temporelle de la source primaire.
+\end{itemize}
+\underline{Ce qui suit est un peu technique et hors-programme} (seul
+le résultat
+est à connaître). \\
+Plus précisément, reprenons le calcul de l'intensité lumineuse
+menant à la formule de Fresnel. \\
+Le terme qui pose souci est le terme de corrélation \\
+$<a_{1}(M,t)a_{2}(M,t)>_{\tau_{d}} =
+\frac{A_{1}A_{2}}{2}<\cos(2\omega
+t-k_{0}[(S_{1}M)+(S_{2}M)]-\varphi_{s1}-\varphi_{s2})>_{\tau_{d}} +
+\frac{A_{1}A_{2}}{2}<\cos(k_{0}[(S_{2}M)-(S_{1}M)]+\varphi_{s2}-\varphi_{s1})>_{\tau_{d}}$.
+\\
+Pour les mêmes raisons que lors de l'obtention de la formule de
+Fresnel à partir du critère expérimental, (sur chaque intervalle
+$\tau_{k} = [(k-1)T,kT]$, $\varphi_{s1}+\varphi_{s2}$ est constant)
+$<\cos(2\omega
+t-k_{0}[(S_{1}M)+(S_{2}M)]-\varphi_{s1}-\varphi_{s2})>_{\tau_{d}} =
+0$. \\
+En revanche, le calcul de
+$<\cos(k_{0}[(S_{2}M)-(S_{1}M)]+\varphi_{s2}-\varphi_{s1})>_{\tau_{d}}$
+doit être explicité. \\
+On écrit : \\
+$<\cos(k_{0}\delta
++\varphi_{s2}-\varphi_{s1})>_{\tau_{d}}\approx
+\frac{1}{NT}\sum_{k=1}^{N}\int_{(k-1)T}^{kT}\cos(k_{0}\delta
++\varphi_{s2,k}-\varphi_{s1,k})dt$ $=$
+$\frac{1}{N}\sum_{k=1}^{N}<\cos(k_{0}\delta
++\varphi_{s2,k}-\varphi_{s1,k})>_{\tau_{k}}=\frac{1}{N}\sum_{k=1}^{N}\cos(k_{0}\delta
++\varphi_{s2,k}-\varphi_{s1,k})$. \\
+Ici, l'hypothèse cruciale est le caractère aléatoire des valeurs
+prises par le déphasage
+$\varphi_{0,k}=\varphi_{s2,k}-\varphi_{s1,k}$ d'un intervalle
+$\tau_{k}$ à $\tau_{k'}$ ($k'\neq k$). \\
+A l'échelle de $\tau_{d}$,
+$\cos(k_{0}\delta +\varphi_{s2}-\varphi_{s1})$ prend de façon
+équiprobable toutes les valeurs comprises entre $-1$ et $1$ ; aussi,
+$\cos(k_{0}\delta +\varphi_{s2}-\varphi_{s1}) =
+\frac{1}{N}\sum_{k=1}^{N}\cos(k_{0}\delta
++\varphi_{s2,k}-\varphi_{s1,k})=0$. \\
+Au final, lorsque $|\delta| > \ell_{c}$, $I_{12} = 0$. \\
+\textbf{En conséquence, lorsque les deux sources sont incohérentes
+(ici par perte de cohérence temporelle), l'intensité en un point $M$
+est la somme des intensités : \fbox{$I(M)=I_{1}(M)+I_{2}(M)$}}.
+
+\section*{II. Interférences entre ondes planes cohérentes}
+\subsection*{2) Eclairement}
+Il faut savoir jongler entre les grandeurs éclairement et intensité
+lumineuse. Dans notre programme, ces deux notions sont confondues.
+\\
+Considérons deux ondes planes cohérentes; de vecteurs d'onde
+$\overrightarrow{k}_{1}$ et $\overrightarrow{k}_{2}$, issues de deux
+sources ponctuelles à l'infini, de même éclairement $\mathcal{E}_{0}$. \\
+Les champs vibratoires associés sont celles d'ondes planes :
+$a_{1}(M,t) = A_{0}\cos(\omega t
+-\overrightarrow{k}_{1}.\overrightarrow{OM}-\varphi_{0})$ et
+$a_{2}(M,t) = A_{0}\cos(\omega t
+-\overrightarrow{k}_{2}.\overrightarrow{OM}-\varphi_{0})$ avec $O$
+une origine (ce point appartient conjointement au plan formé par les
+deux vecteurs d'onde et au plan de l'écran qui est le plan $(Oxy)$)
+et $\varphi_{0}$ la phase à l'origine en $O$ constante. \\
+En notation complexe, les champs vibratoires sont :
+$\underline{a}_{1}(M,t) = A_{0}e^{i\varphi_{1}}$ avec $\varphi_{1} =
+\omega t -\overrightarrow{k}_{1}.\overrightarrow{OM}-\varphi_{0}$ et
+$\underline{a}_{2}(M,t) = A_{0}e^{i\varphi_{2}}$ avec $\varphi_{2} =
+\omega t
+-\overrightarrow{k}_{2}.\overrightarrow{OM}-\varphi_{0}$. \\
+Or, $\mathcal{E}_{1}(M) =
+\underline{a}_{1}(M,t)\underline{a}_{1}^{*}(M,t)=|\underline{a}_{1}|^{2}(M,t)=A_{0}^{2}
+$ ; de même, $\mathcal{E}_{2}(M) =
+\underline{a}_{2}(M,t)\underline{a}_{2}^{*}(M,t)=|\underline{a}_{2}|^{2}(M,t)=
+A_{0}^{2}$.
+\\
+L'éclairement $\mathcal{E}(M)$ se calcule par : $\mathcal{E}(M) =
+\underline{a}(M,t)\underline{a}^{*}(M,t) =
+[\underline{a}_{1}(M,t)+\underline{a}_{2}(M,t)][\underline{a}_{1}^{*}(M,t)+\underline{a}_{2}^{*}(M,t)]
+= 2\mathcal{E}_{0}+ \underline{a}_{1}(M,t)\underline{a}_{2}^{*}(M,t)
++ \underline{a}_{1}^{*}(M,t)\underline{a}_{2}(M,t)$, ou encore : \\
+$\mathcal{E}(M) = 2\mathcal{E}_{0}+
+\mathcal{E}_{0}e^{i(\varphi_{1}-\varphi_{2})}+\mathcal{E}_{0}e^{-i(\varphi_{1}-\varphi_{2})}$.
+\\
+Il s'ensuit que : $\mathcal{E}(M) =
+2\mathcal{E}_{0}(M)(1+\cos[\varphi_{1}-\varphi_{2}])$.
+\\
+On remplaçe les phases par leur expression et on retrouve la formule
+de Fresnel à deux ondes cohérentes (planes ici) : \\
+\fbox{$\mathcal{E}(M) = 2\mathcal{E}_{0}(M)(1+\cos[\Delta
+\varphi])$} avec $\Delta \varphi =
+[\overrightarrow{k}_{1}-\overrightarrow{k}_{2}].\overrightarrow{OM}$
+ou (en exploitant la parité de la fonction cosinus) : $\Delta
+\varphi =
+[\overrightarrow{k}_{2}-\overrightarrow{k}_{1}].\overrightarrow{OM}$.
+\\
+Par la suite, on conservera (arbitrairement) $\Delta \varphi =
+[\overrightarrow{k}_{1}-\overrightarrow{k}_{2}].\overrightarrow{OM}$.
+On posera donc $\overrightarrow{K} =
+\overrightarrow{k}_{1}-\overrightarrow{k}_{2}$. \\
+Explicitons maintenant les coordonnées des vecteurs d'onde dans la
+base $(Oxyz)$ ($k_{0} = \frac{2\pi}{\lambda_{0}}$ est le nombre d'onde dans le vide). \\
+On a : $\overrightarrow{k}_{1} =
+k_{0}[\cos(\frac{\alpha}{2})\overrightarrow{u}_{x}+\sin(\frac{\alpha}{2})\overrightarrow{u}_{z}]$
+et $\overrightarrow{k}_{2} =
+k_{0}[\cos(\frac{\alpha}{2})\overrightarrow{u}_{x}-\sin(\frac{\alpha}{2})\overrightarrow{u}_{z}]$.
+\\
+On en déduit immédiatement le déphasage entre les ondes interférant
+en un point $M$ par : $\Delta \varphi =
+2k_{0}x\sin(\frac{\alpha}{2})\overrightarrow{u}_{z} =
+\frac{4\pi}{\lambda_{0}}x\sin(\frac{\alpha}{2})\overrightarrow{u}_{z}$
+et la différence de marche par : $\delta =\frac{\Delta
+\varphi}{k_{0}}=2x\sin(\frac{\alpha}{2})$. \\
+La formule de Fresnel à deux ondes planes cohérentes (avec ici
+$\mathcal{E}_{1} = \mathcal{E}_{2}$) est :
+\begin{eqnarray}\label{Eq.2}
+\mathcal{E} =
+2\mathcal{E}_{0}[1+\cos(\frac{4\pi}{\lambda_{0}}x\sin(\frac{\alpha}{2}))].
+\end{eqnarray}
+
+\subsection*{3) Interfrange $i$}
+Je propose deux démonstrations.
+\begin{itemize}
+\item \underline{Première démonstration :} L'interfrange est la période spatiale de l'éclairement ou de
+l'intensité lumineuse ; ceci se traduit mathématiquement par :
+\begin{eqnarray}\label{Eq.3}
+\mathcal{E}(x)  =2\mathcal{E}_{0}[1+\cos(\frac{2\pi x}{i})].
+\end{eqnarray}
+En comparant les équations (\ref{Eq.2}) et (\ref{Eq.3}), on obtient
+directement : \fbox{$i =
+\frac{\lambda_{0}}{2\sin(\frac{\alpha}{2})}$}.
+\item \underline{Seconde démonstration :} On utilise ici la
+définition basique de l'interfrange. \\
+Notons $x_{m}$ la position du centre de la $m^{\grave{e}me}$ frange
+brillante ; on a : $\delta_{m} = m\lambda_{0} =
+2x_{m}\sin(\frac{\alpha}{2})$
+avec $m \in \mathbb{Z}$. \\
+De même, soit $x_{m+1}$ la position du centre de la
+$m+1^{\grave{e}me}$ frange brillante ; on a : $\delta_{m+1} =
+(m+1)\lambda_{0} = 2x_{m+1}\sin(\frac{\alpha}{2})$ avec $m \in
+\mathbb{Z}$. \\
+On en déduit que : $i = x_{m+1}-x_{m} =
+\frac{\delta_{m+1}}{2\sin(\frac{\alpha}{2})}-\frac{\delta_{m}}{2\sin(\frac{\alpha}{2})}$
+$=$ $\frac{\lambda_{0}}{2\sin(\frac{\alpha}{2})}$. \\
+Si $\alpha <<1$, $\sin(\frac{\alpha}{2}) \approx \frac{\alpha}{2}$,
+d'où : \fbox{$i \approx \frac{\lambda_{0}}{\alpha}$}.
+\end{itemize}
+
+\section*{III. Interférences en lumière polychromatique}
+\subsection*{2) Proposition}
+Une source polychromatique primaire ponctuelle  constituée de deux
+radiations monochromatiques peut être vue comme la superposition de
+deux sources primaires ponctuelles monochromatiques. Les trains
+d'onde qu'elles émettent ne proviennent pas d'un même train d'onde
+originel : les deux sources sont incohérentes entre elles. Les
+intensités lumineuses s'ajoutent (une démonstration quantitative
+sera proposée dans le TD O2).
+
+\subsection*{3) Cas du doublet spectral}
+A chaque radiation monochromatique de la source primaire ponctuelle,
+on associe une source primaire, ponctuelle, monochromatique de
+longueur d'onde
+$\lambda_{1}$ ou $\lambda_{2}$. \\
+En l'absence d'interférences, la source primaire, ponctuelle,
+monochromatique primaire  à $\lambda_{1}$, d'intensité lumineuse
+$I_{0}$ crée deux sources secondaires, ponctuelles, cohérentes car
+monochromatiques (= synchrones) à $\lambda_{1}$, de même
+intensité $I_{0}$. \\
+Dès lors, la formule de Fresnel est licite et on écrit :
+$I_{\lambda_{1}}(M) = 2I_{0}[1+\cos(\frac{2\pi
+\delta}{\lambda_{1}})]$. \\
+De même, en l'absence d'interférences, la source primaire,
+ponctuelle, monochromatique à $\lambda_{2}$, d'intensité lumineuse
+$I'_{0}$ (pour simplifier, on suppose que $I_{0}=I_{0}'$) crée deux
+sources secondaires, ponctuelles, cohérentes car monochromatiques à
+$\lambda_{2}$, de même
+intensité $I_{0}$. \\
+Ainsi, on a : $I_{\lambda_{2}}(M) = 2I_{0}[1+\cos(\frac{2\pi
+\delta}{\lambda_{2}})]$. \\
+Les deux sources primaires, ponctuelles, monochromatiques à
+$\lambda_{1}$ et $\lambda_{2}$ étant incohérentes entre elles (car
+non synchrones), les intensités qu'elles produisent en $M$ par le
+jeu des sources secondaires, s'ajoutent : \\
+$I(M) =
+2I_{0}[1+\cos(\frac{2\pi
+\delta}{\lambda_{1}})]+2I_{0}[1+\cos(\frac{2\pi
+\delta}{\lambda_{2}})]$ ou encore ($\cos(p)+\cos(q) =
+2\cos(\frac{p+q}{2})\cos(\frac{p-q}{2})$) :
+\\
+$I(M) =
+2I_{0}[2+2\cos(\pi\delta[\frac{1}{\lambda_{1}}+\frac{1}{\lambda_{2}}])\times
+\cos(\pi\delta[\frac{1}{\lambda_{1}}-\frac{1}{\lambda_{2}}])]$. \\
+Par ailleurs, en notant $\lambda_{0} =
+\frac{\lambda_{1}+\lambda_{2}}{2}$ la longueur d'onde moyenne et
+$\Delta \lambda = \lambda_{2}-\lambda_{1}$, on a ($\lambda_{2} >
+\lambda_{1}$), $\lambda_{1} = \lambda_{0}-\frac{\Delta \lambda}{2}$
+et $\lambda_{2} = \lambda_{0}+\frac{\Delta \lambda}{2}$. \\
+On en déduit que :
+\begin{itemize}
+\item $\frac{1}{\lambda_{1}}+\frac{1}{\lambda_{2}} =
+\frac{\lambda_{2}\lambda_{1}}{\lambda_{1}+\lambda_{2}} \approx
+\frac{2}{\lambda_{0}}$ ;
+\item $\frac{1}{\lambda_{1}}-\frac{1}{\lambda_{2}} =
+\frac{\lambda_{2}-\lambda_{1}}{\lambda_{1}\lambda_{2}} \approx
+\frac{\Delta \lambda}{\lambda_{0}^{2}}$.
+\end{itemize}
+On en déduit que l'intensité lumineuse s'exprime par : \\
+\fbox{$I(M) = 4I_{0}[1+\cos(\frac{2\pi \delta }{\lambda_{0}})\times
+\cos(\frac{\pi \delta \Delta \lambda}{\lambda_{0}^{2}})]$}. \\
+Cette expression se met sous la forme : \\
+$I(M) =
+4I_{0}[1+V(\delta)\cos(\frac{2\pi \delta }{\lambda_{0}})]$. \\
+$V(\delta)$ est la fonction de visibilité. Cette fonction de période
+spatiale $\Lambda  = \frac{\lambda_{0}^{2}}{2\Delta \lambda} >>
+\lambda_{0}$ (cette fonction est de la forme $V(\delta) =
+\cos(\frac{2\pi \delta }{\Lambda})$) varie lentement à l'échelle de
+$\lambda_{0}$ : elle module l'intensité lumineuse et constitue
+"l'enveloppe" de l'intensité lumineuse. On observe le phénomène de
+"battements" (Cf. Annexe n$^{\circ}$6 du support de cours O2).
+
+\subsection*{4) Raie spectrale de largeur non nulle: modélisation du profil par un profil
+rectangulaire}
+La démonstration comporte plusieurs étapes de
+raisonnement. Détaillons les.
+\begin{itemize}
+\item On décompose la source primaire, ponctuelle, polychromatique en
+une infinité de sources primaires, ponctuelles
+quasi-monochromatiques de fréquence $\nu$ et d'épaisseur spectrale
+$d\nu$.
+\item L'intensité lumineuse en un point $M$ due à la source
+ponctuelle quasi-monochromatique de fréquence $\in[\nu, \nu + d\nu]$
+est donnée par la formule de Fresnel à deux ondes (cette source
+produit deux sources secondaires, ponctuelles, cohérentes car
+synchrones, de même intensité $dI_{0}$) : $dI(M) =
+2dI_{0}[1+\cos\frac{2\pi\delta(M)}{\lambda}]=2dI_{0}[1+\cos\frac{2\pi
+\nu\delta(M)}{c}]$. \\
+Soit $I_{0} = f_{0}\Delta \nu$ l'intensité lumineuse produite par la
+source primaire ponctuelle dans le modèle du profil spectral
+("taillé à
+la serpe") rectangulaire. On écrit aussi $dI_{0} = f_{0}d\nu$. \\
+On a : $dI(M) = 2f_{0}[1+\cos\frac{2\pi
+\nu\delta(M)}{c}]d\nu$. \\
+Posons $\tau(M) = \frac{\delta(M)}{c}$ (c'est un temps
+caractéristique du phénomène d'interférences : il exprime le
+décalage temporel entre les deux ondes issues de la source primaire
+(et divisées par division d'amplitude ou par division du front
+d'ondes) et ayant parcouru des chemins optiques
+différents avant d'interférer en $M$) ; on en déduit que : \\
+\fbox{$dI(M) = 2f_{0}[1+\cos(2\pi\nu\tau(M))]d\nu$}.
+\item Les différentes radiations monochromatiques composant le profil
+spectral de la source primaire sont incohérentes entre elles : les
+intensités qu'elles produisent, via le jeu des sources secondaires,
+au point $M$ de l'écran s'ajoutent ; il s'ensuit que :  $I(M) =
+\int_{\nu_{0}-\frac{\Delta \nu}{2}}^{\nu_{0}+\frac{\Delta
+\nu}{2}}dI(M,\nu)$.
+\item Le calcul détaillé est le suivant :
+\\
+$I(M) = 2f_{0}\int_{\nu_{0}-\frac{\Delta
+\nu}{2}}^{\nu_{0}+\frac{\Delta \nu}{2}}[1+\cos\frac{2\pi
+\nu\delta(M)}{c}]d\nu$ $=$ $2f_{0}\Delta \nu +
+\int_{\nu_{0}-\frac{\Delta \nu}{2}}^{\nu_{0}+\frac{\Delta
+\nu}{2}}cos(\frac{2\pi \nu\delta(M)}{c})d\nu$ $=$ $2I_{0}+
+\frac{2I_{0}}{\Delta \nu}\int_{\nu_{0}-\frac{\Delta
+\nu}{2}}^{\nu_{0}+\frac{\Delta \nu}{2}}cos(\frac{2\pi
+\nu\delta(M)}{c})d\nu$. \\
+Le calcul se poursuit comme suit :
+\\
+$I(M) = 2I_{0}+\frac{2I_{0}}{\Delta \nu}\times\frac{c}{2\pi
+\delta}[\sin(\frac{2\pi \nu \delta}{c})]_{\nu_{0}-\frac{\Delta
+\nu}{2}}^{\nu_{0}+\frac{\Delta \nu}{2}}$ $=$
+$2I_{0}\biggl(1+\frac{c}{2\pi \delta \Delta
+\nu}(\sin[\frac{2\pi\delta}{c}(\nu_{0}+\frac{\Delta\nu}{2})]
+-\sin(\frac{2\pi\delta}{c}[\nu_{0}-\frac{\Delta\nu}{2}]))\biggr)$.
+\\
+Or, $\sin a - \sin b = 2\sin(\frac{a-b}{2})\cos(\frac{a+b}{2})$. Il
+s'ensuit que : \\
+$I(M) = 2I_{0}[1+\frac{c}{\pi\delta \Delta \nu}\sin(\frac{\pi
+\delta\Delta \nu}{c})\cos(\frac{2\pi \delta \nu_{0}}{c})]$. \\
+On pose \fbox{$V = \frac{c}{\pi\delta \Delta \nu}\sin(\frac{\pi
+\delta\Delta \nu}{c}) = sinc(\frac{\pi \delta\Delta \nu}{c})$}, la
+fonction de
+visibilité. \\
+Finalement, on obtient la formule de l'intensité lumineuse (ou de
+l'éclairement) suivante :
+\\
+\fbox{$I(M) = 2I_{0}[1+V\cos(\frac{2\pi \delta(M)
+\nu_{0}}{c})]$} ou encore : \\
+\fbox{$I(M) =2I_{0}[1+V\cos(\frac{2\pi \delta(M)}{\lambda_{0}})]$}. \\
+En introduisant $\tau(M) = \frac{\delta(M)}{c}$, il vient : $I(M) =
+2I_{0}[1+V(\tau(M))\cos(2\pi\nu_{0}\tau(M))]$.
+\item L'allure de l'intensité en fonction de $\tau$ est donnée sur la
+figure \ref{Fig.3}. \\
+La première annulation de la visibilité qui correspond au brouillage
+des franges est : $V(\tau(M))=0$, soit $sinc(\pi\Delta \nu
+\tau(M))=0$, puis : $\pi\Delta \nu \tau(M) = \pi$ (et NON 0 ! car un
+équivalent de $sinc(x)$ au voisinage de $x=0$ est 1 !). On en déduit
+qu'à la première annulation\footnote{On rappelle que
+$\frac{1}{\Delta \nu} = \frac{1}{\nu_{1}-\nu_{2}}$ avec $\nu_{1} =
+\frac{c}{\lambda_{1}}$ et $\lambda_{1} = \lambda_{0}-\frac{\Delta
+\lambda}{2}$, $\nu_{2} = \frac{c}{\lambda_{2}}$ et $\lambda_{2} =
+\lambda_{0}+\frac{\Delta \lambda}{2}$, d'où : $\frac{1}{\Delta \nu}
+= \frac{1}{\frac{c}{\lambda_{0}-\frac{\Delta
+\lambda}{2}}-\frac{c}{\lambda_{0}+\frac{\Delta \lambda}{2}}}$ $=$
+$\frac{(\lambda_{0}-\frac{\Delta
+\lambda}{2})(\lambda_{0}+\frac{\Delta \lambda}{2})}{c\Delta\lambda}
+\approx \frac{\lambda_{0}^{2}}{c\Delta\lambda}$.}, \fbox{$\tau(M) =
+\frac{1}{\Delta \nu}=\frac{\lambda_{0}^{2}}{c\Delta
+\lambda}=\frac{\ell_{c}}{c}$}.
+\\
+Cette première annulation permet d'évaluer le temps de cohérence
+temporelle de la source : $\tau(M) = \frac{1}{\Delta \nu}$, ainsi
+que la longueur de cohérence temporelle $\ell_{c} =
+\frac{\lambda_{0}^{2}}{\Delta\lambda}$.
+\begin{figure}[h]
+\begin{center}
+\epsfig{file=Fig3.eps,height=4.5cm, width=7.5cm}
+\end{center}
+\caption{Tracé de $\frac{I}{2I_{0}}$ en fonction de $\tau(M)$. On a
+pris pour un confort visuel $\frac{\Delta \nu}{\nu_{0}}=10$. La
+première annulation de la visibilité donne accès au temps de
+cohérence temporel de la source $\frac{\ell_{c}}{c} =
+\tau_{annulation} = \Delta t$.}\label{Fig.3}
+\end{figure}
+\end{itemize}
+On remarque que plus la largeur spectrale de la source est faible,
+plus la longueur de cohérence temporelle de la source primaire
+augmente. A la limite où $\Delta \lambda \rightarrow 0$, $\ell_{c}
+\rightarrow +\infty$ : on retrouve le caractère éternel de la source
+monochromatique qui n'a ni début , ni fin. La durée d'émission est
+infinie !
+
+\subsection*{7)  Critère semi-quantitatif de brouillage des franges (critère de cohérence temporelle)}
+Appliquons le critère au cas de la source polychromatique de profil
+spectral idéalisé rectangulaire. \\
+Au centre du profil spectral, on peut écrire que : $\delta(M) =
+p_{1}\lambda_{0}$ ; pour la radiation du profil à
+$\lambda_{0}+\frac{\Delta \lambda}{2}$, on a : $\delta(M) =
+p_{2}[\lambda_{0}+\frac{\Delta \lambda}{2}]$. On en déduit en $M$ la
+différence de l'ordre d'interférences : $\Delta p = p_{1}-p_{2} =
+\frac{\delta}{\lambda_{0}}-\frac{\delta}{\lambda_{0}+\frac{\Delta
+\lambda}{2}} =
+\delta[\frac{1}{\lambda_{0}}-\frac{1}{\lambda_{0}+\frac{\Delta
+\lambda}{2}}] = \delta \times \frac{\frac{\Delta
+\lambda}{2}}{\lambda_{0}[\lambda_{0}+\frac{\Delta \lambda}{2}]}
+\approx \delta\frac{\Delta \lambda}{2\lambda_{0}^{2}}$. \\
+D'après le critère, il y a brouillage des franges à la condition que
+$\Delta p > \frac{1}{2}$, soit : $\delta\frac{\Delta
+\lambda}{2\lambda_{0}^{2}} > \frac{1}{2}$ ou encore : $\delta
+> \frac{\lambda_{0}^{2}}{\Delta \lambda} = \ell_{c}$. \\
+On retrouve par une approche semi-qualitative le résultat du calcul
+complet mené dans le paragraphe III.4.
+
+\section*{IV. Interférences par division du front d'ondes}
+\subsection*{1) Dispositif des trous d'Young}
+\subsubsection*{b) Cas de la source primaire ponctuelle quasi-monochromatique}
+Dans la base cartésienne $(Oxyz)$, les différents points \textit{ad
+hoc} ont pour coordonnées : $S(0,0,-(d+D))$,
+$S_{1}(\frac{a}{2},0,-D)$, $S_{2}(-\frac{a}{2},0,-D)$ et $M(x,y,0)$.
+\\
+Calculons la distance $S_{1}M$ : \\
+$S_{1}M = \sqrt{(x-\frac{a}{2})^{2}+y^{2}+D^{2}}$. Or, la distance
+$D$ est très grande devant les autres distances du problème. Aussi,
+réécrivons $S_{1}M$ sous la forme: \\
+$S_{1}M =
+D[1+\frac{y^{2}}{D^{2}}+\frac{(x-\frac{a}{2})^{2}}{D^{2}}]^{\frac{1}{2}}$.
+\\
+Or, les quantités $\frac{y}{D}$ et $\frac{x-\frac{a}{2}}{D}$ sont
+des infiniments petits du premier ordre. Posons $u^{2} =
+\frac{y^{2}}{D^{2}}+\frac{(x-\frac{a}{2})^{2}}{D^{2}}$ un infiniment
+petit du second ordre. On sait qu'un DL à "l'ordre 2" donne :
+$(1+u^{2})^{\alpha} \approx 1+\alpha u^{2}$. \\
+Il s'ensuit que  : $S_{1}M \approx
+D[1+\frac{y^{2}}{2D^{2}}+\frac{(x-\frac{a}{2})^{2}}{2D^{2}}]$.
+\\
+De même, $S_{2}M =
+D[1+\frac{y^{2}}{D^{2}}+\frac{(x+\frac{a}{2})^{2}}{D^{2}}]^{\frac{1}{2}}$,
+puis : $S_{2}M \approx
+D[1+\frac{y^{2}}{2D^{2}}+\frac{(x+\frac{a}{2})^{2}}{2D^{2}}]$. \\
+La différence de marche est : $\delta = (SS_{2}M) - (SS_{1}M)$ $=$
+$(SS_{2}) + (S_{2}M)-[(SS_{1})+(S_{1}M)]$.  \\
+Or, $S$ est une source ponctuelle qui émet des ondes sphériques.
+Pour toute date $t$, la surface d'onde issue de $S$ atteignant
+$S_{1}$ atteint également $S_{2}$ : $S_{1}$ et $S_{2}$ appartiennent
+à cette surface d'onde, donc : $(SS_{1}) = (SS_{2})$. On travaille
+par ailleurs dans l'air assimilé au vide, donc : $(SS_{1}) = SS_{1}$
+et $(SS_{2}) = SS_{2}$. \\
+Dit autrement, les sources secondaires sont équidistantes de $S$.
+\\
+Il ne reste plus que : $\delta = SS_{2}-SS_{1}$. A l'aide des
+approximations précédentes, on a : \\
+$\delta \approx
+D[1+\frac{y^{2}}{2D^{2}}+\frac{(x+\frac{a}{2})^{2}}{2D^{2}}]$ $-$
+$D[1+\frac{y^{2}}{2D^{2}}+\frac{(x-\frac{a}{2})^{2}}{2D^{2}}]$. \\
+On développe ce calcul et on aboutit à : $\delta \approx
+\frac{(x+\frac{a}{2})^{2}}{2D}-\frac{(x-\frac{a}{2})^{2}}{2D}$, ou
+encore : \fbox{$\delta(x) = \frac{ax}{D}$}. \\
+\begin{itemize}
+\item Calculons l'intensité en un point de l'écran. \\
+Notons $I_{0}$ l'intensité lumineuse de chacune des sources
+secondaires. En vertu de la formule de Fresnel, l'intensité en $M$
+est : \fbox{$I(M) = 2I_{0}[1+\cos(\frac{2\pi a x}{\lambda_{0}D})]$}.
+\item Déterminons la nature des franges. \\
+Le lieu des points $M$ sur l'écran d'égale intensité est le lieu
+d'égale différence de marche donc d'égal $x$ : les franges sont
+rectilignes. \\
+\underline{Variante :} L'écran étant placé parallèlement aux sources
+secondaires, les franges sont rectilignes.
+\item Calculons l'interfrange. L'interfrange est la période spatiale
+de l'éclairement, soit : $I(x)  =2I_{0}[1+\cos(\frac{2\pi x }{i})]$.
+En comparant cette formule à la précédente, on obtient de suite :
+\fbox{$i=\frac{\lambda_{0}D}{a}$}. \\
+Une autre méthode consiste à expliciter la définition "basique" de
+l'interfrange. Pour ce faire, en notant, par exemple,  $x_{m}$ le
+centre de la $m^{\grave{e}me}$ frange sombre, on a : $\delta_{m} =
+(m+\frac{1}{2})\lambda_{0} = \frac{ax_{m}}{D}$, d'où : $x_{m} =
+(m+\frac{1}{2})\frac{\lambda_{0}D}{a}$. De même, $x_{m+1} =
+(m+\frac{3}{2})\frac{\lambda_{0}D}{a}$, d'où :
+\fbox{$i=x_{m+1}-x_{m} = \frac{\lambda_{0}D}{a}$}.
+\end{itemize}
+
+\subsection*{3)  Utilisation d'une source étendue et quasi-monochromatique: cohérence
+spatiale} La démonstration comporte plusieurs étapes de
+raisonnement. Détaillons les.
+\begin{itemize}
+\item On décompose la source primaire $S$, quasi-monochromatique (de longueur d'onde $\lambda_{0}$), étendue
+en une infinité de sources primaires, quasi-monochromatiques,
+ponctuelles $S'$ situées aux absisses $X$ ($-\frac{b}{2}\leq X \leq
++\frac{b}{2}$), d'épaisseur $dX$, d'intensité élémentaire $dI_{0}$.
+\item Montrons que la différence de marche issue de $S'$ est : $\delta \approx
+\frac{ax}{D}+\frac{aX}{d}$. Ici $x$ est fixé (le point $M$ de
+l'écran est fixe). \\
+Dans la base cartésienne $(Oxyz)$, les différents points \textit{ad
+hoc} ont pour coordonnées : $S'(X,0,-(d+D))$,
+$S_{1}(\frac{a}{2},0,-D)$, $S_{2}(-\frac{a}{2},0,-D)$ et $M(x,y,0)$.
+\\
+Calculons la distance $S'S_{1}$ : \\
+$S'S_{1}= \sqrt{(\frac{a}{2}-X)^{2}+y^{2}+d^{2}}$. Or, la distance
+$d$ est très grande devant les autres distances $b$, $a$, $y$.
+Aussi, réécrivons $S'S_{1}$ sous la forme : $S'S_{1} =
+d[1+\frac{y^{2}}{d^{2}}+\frac{(\frac{a}{2}-X)^{2}}{d^{2}}]^{\frac{1}{2}}$.
+\\
+Un DL à "l'ordre 2" conduit à : \\
+$S'S_{1} \approx
+d[1+\frac{y^{2}}{2d^{2}}+\frac{(X-\frac{a}{2})^{2}}{2d^{2}}]$.
+\\
+De même, $S'S_{2} \approx
+d[1+\frac{y^{2}}{2d^{2}}+\frac{(X+\frac{a}{2})^{2}}{2d^{2}}]$. \\
+La différence de marche est : $\delta = (SS_{2}M) - (SS_{1}M)$ $=$
+$(SS_{2}) + (S_{2}M)-[(SS_{1})+(S_{1}M)]$.  \\
+On travaille dans l'air ; comme précédemment, on obtient que :
+$S_{2}M-S_{1}M \approx \frac{ax}{D}$ la différence de marche en
+aval des sources secondaires. \\
+On en déduit que: \fbox{$\delta = S'S_{2}-S'S_{1} + \frac{ax}{D}
+\approx \frac{aX}{d}+\frac{ax}{D}$}.
+\item L'intensité lumineuse en un point $M$ due à la source primaire,
+ponctuelle, située dans la bande $\in[X, X + dX]$,
+quasi-monochromatique est $dI_{0}$. \\
+Notons $I_{0} = Ab$ l'intensité lumineuse produite par la source
+primaire étendue de largeur $b$. \\
+Avec l'hypothèse que la source primaire étendue émet un éclairement
+uniforme, le modèle du profil spatial ("taillé à la serpe" gauloise
+!) rectangulaire est licite. On écrit donc $dI_{0} = AdX$.
+\item Chaque source primaire, ponctuelle, quasi-monochromatique créé deux sources
+secondaires, ponctuelles, cohérentes de même intensité $dI_{0}$.
+\item L'intensité en un point $M$ est donnée par la formule de Fresnel à deux ondes : $dI(x,X) =
+2dI_{0}[1+\cos\frac{2\pi\delta(x,X)}{\lambda}]=2dI_{0}[1+\cos\frac{2\pi\delta(x,X)}{\lambda_{0}}]$. \\
+On a encore : $dI(x,X) =
+2A[1+\cos\frac{2\pi\delta(x,X)}{\lambda_{0}}]dX$.
+\item Les différentes sources primaires, ponctuelles (quasi-monochromatiques)
+composant la source primaire étendue (quasi-monochromatique) sont
+incohérentes entre elles\footnote{Les différents trains d'ondes
+qu'elles émettent sont sans relation de phase entre eux : à une date
+donnée, les différentes phases à l'origine varient aléatoirement
+d'un train d'onde à l'autre.} : les intensités qu'elles produisent
+au point $M$ de l'écran s'ajoutent ; il s'ensuit que : $I(x,X) =
+\int_{-\frac{b}{2}}^{+\frac{b}{2}}dI(x,X)$.
+\item Le calcul détaillé est le suivant :
+\\
+$I(x,X) = 2A\int_{-\frac{b}{2}}^{+\frac{b}{2}}[1+\cos(\frac{2\pi
+ax}{\lambda_{0}D}+\frac{2\pi aX}{\lambda_{0}d})]dX$. \\
+Le calcul se poursuit comme suit :
+\\
+$I(x,X) = 2I_{0}+\frac{2I_{0}}{b}\times
+\int_{-\frac{b}{2}}^{+\frac{b}{2}}\cos(\frac{2\pi
+ax}{\lambda_{0}D}+\frac{2\pi aX}{\lambda_{0}d})dX$ ou encore : \\
+$I(x,X) = 2I_{0}[1+\frac{\lambda_{0}d}{2\pi ab}[\sin(\frac{2\pi
+ax}{\lambda_{0}D}+\frac{2\pi
+aX}{\lambda_{0}d})]_{-\frac{b}{2}}^{+\frac{b}{2}}$ $=$
+$2I_{0}[1+\frac{\lambda_{0}d}{2\pi ab}\times [\sin(\frac{2\pi
+ax}{\lambda_{0}D}+\frac{\pi ab}{\lambda_{0}d}) - \sin(\frac{2\pi
+ax}{\lambda_{0}D}-\frac{\pi ab}{\lambda_{0}d})]]$.
+\\
+Or, $\sin a - \sin b = 2\sin(\frac{a-b}{2})\cos(\frac{a+b}{2})$. Il
+s'ensuit que : \\
+$I(x,X) = 2I_{0}[1+\frac{\lambda_{0}d}{\pi ab}\times \sin(\frac{\pi
+ab}{\lambda_{0}d})\cos(\frac{2\pi ax}{\lambda_{0}D})]$. \\
+On pose \fbox{$V(b) = \frac{\lambda_{0}d}{\pi a b}\times
+\sin(\frac{\pi ab}{\lambda_{0}d})=sinc(\frac{\pi
+ab}{\lambda_{0}d})$}, la fonction de
+visibilité. \\
+Finalement, on obtient la formule de l'intensité lumineuse (ou de
+l'éclairement) suivante :
+\\
+\fbox{$I(x,X) = 2I_{0}[1+V(b)\cos(\frac{2\pi ax}{\lambda_{0}D})]$}. \\
+Il y a brouillage des franges lorsque la visibilité s'annule, soit
+$\frac{\pi ab}{\lambda_{0}d}= m \pi$ avec $m$ un entier naturel NON
+NUL, d'où : $b_{m} = m\frac{\lambda_{0}d}{a}$. \\
+Mathématiquement, notre modèle prédit le brouillage des franges
+toutes les fois où la largeur de la source primaire étendue est un
+multiple entier de la quantité $\frac{\lambda_{0}d}{a}$. \\
+Physiquement parlant, dans le modèle des trains d'onde, la perte de
+cohérence (ici spatiale) de la source primaire se manifeste dès que
+la première annulation est réalisée, ce qui est acquis pour la
+largeur de la source primaire valant : \fbox{$b_{1} =
+\frac{\lambda_{0}d}{a}$}. \\
+Cette longueur caractéristique du
+brouillage des franges est appelée longueur de cohérence spatiale de
+la source.
+\end{itemize}
+
+\subsection*{4)  Critère semi-quantitatif de brouillage des franges (critère de cohérence spatiale)}
+Appliquons le critère au cas de la source étendue
+quasi-monochromatique.
+\begin{itemize}
+\item Pour la source ponctuelle $S'=O''$ en $X=0$, on peut écrire que :
+$\delta(X=0) = p_{1}\lambda_{0}=\frac{ax}{D}$.
+\item Pour la source ponctuelle $S'=A$ en $X=\frac{b}{2}$, on peut écrire
+que : $\delta(X=+\frac{b}{2}) =
+p_{2}\lambda_{0}=\frac{ab}{2d}+\frac{ax}{D}$.
+\end{itemize}
+On en déduit en $M$ la différence de l'ordre d'interférences :
+$\Delta p = p_{2}-p_{1} =
+\frac{ab}{2\lambda_{0}d}$. \\
+D'après le critère, il y a brouillage des franges à la condition que
+$\Delta p > \frac{1}{2}$, soit : $ \frac{ab}{2\lambda_{0}d} >
+\frac{1}{2}$ ou encore : \fbox{$b
+> \frac{\lambda_{0}d}{a} = b_{1}$}. \\
+On retrouve par une approche semi-qualitative le résultat du calcul
+complet mené dans le paragraphe IV.4.
+\end{document}
