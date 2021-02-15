@@ -122,7 +122,7 @@ fs.readdir("./tex_files/", (err, files) => {
         var output = fs.createWriteStream(`./pdf_preview/preview_${file}.pdf`)
 
         const options = {
-            errorLogs: 'latexerrorsa.log', // This will write the errors to `latexerrors.log`
+            errorLogs: 'latexerrors.log', // This will write the errors to `latexerrors.log`
             inputs: './assets/'
         }
 
