@@ -29,7 +29,8 @@ fs.readdir("./tex_files/", (err, files) => {
         par = par.replace(/\\textbf\{(\d\d?)(\.|\)) *((.|\r?\n?)*?)\}( |(\r?\n?))?(\\\\)?/g, "\\subsection*{$1. $3}")
         par = par.replace(/\\textbf\{([a-z])(\.|\)) *((.|\r?\n?)*?)\}( |(\r?\n?))?(\\\\)?/g, "\\subsubsection*{$1) $3}")
 
-        par = par.replace(/ :/g, " :")
+        par = par.replace(/( |\n|\r){1,2}:/g, "~:")
+        par = par.replace(/( |\n|\r){1,2};/g, "~;")
         par = par.replace(/\$\\times\$ désigne/g, "$$\\wedge$$ désigne")
 
         function parenth(str) {
