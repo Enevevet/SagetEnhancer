@@ -72,6 +72,7 @@ fs.readdir("./tex_files/", (err, files) => {
             p3 = p3.replace(/\\overrightarrow{rot}/g, "\\rot ")
             p3 = p3.replace(/\\overrightarrow{grad}/g, "\\grad ")
             p3 = p3.replace(/div/g, "\\div")
+            p3 = p3.replace(/(?<!\\)(cos|sin|arctan|arcsin|arccos|ch|sh)\(/g, "\\$1(")
                 //p3 = p3.replace(/\(([^)]{5,}?)\)/g, "\\left($1\\right)")
             p3 = parenth(p3)
                 //p3 = p3.replace(/(?<!\\[a-z]*)\[/gi, "\\left[") //Genre c'est possible mdr

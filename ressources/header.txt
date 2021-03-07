@@ -82,3 +82,8 @@
 \DeclareMathOperator{\rot}{\overrightarrow{\mathrm{rot}}}
 \let\grad\relax
 \DeclareMathOperator{\grad}{\overrightarrow{\mathrm{grad}}}
+
+\let\ch\relax
+\DeclareMathOperator{\ch}{ch}
+\let\sh\relax
+\DeclareMathOperator{\sh}{sh}
