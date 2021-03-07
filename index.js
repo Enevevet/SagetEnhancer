@@ -68,6 +68,7 @@ fs.readdir("./tex_files/", (err, files) => {
 
         //REPLACER DE MATHS
         function replacer(match, p1, p2, p3, p4, p5, offset, string) {
+            p3 = p3.replace(/(\r|\n)/g, " ")
             p3 = p3.replace(/\\overrightarrow{rot}/g, "\\rot ")
             p3 = p3.replace(/\\overrightarrow{grad}/g, "\\grad ")
             p3 = p3.replace(/div/g, "\\div")
