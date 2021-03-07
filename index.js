@@ -66,6 +66,17 @@ fs.readdir("./tex_files/", (err, files) => {
             return str
         }
 
+        function wellparenth(str, ind) {
+            if (ind < 0) {
+                return false
+            }
+            if (str.length === 0) {
+                return (ind === 0)
+            }
+            let num = (str[0] === '[' ? 1 : str[0] === ']' ? -1 : 0)
+            return wellparenth(str.slice(1), ind + num)
+        }
+
         //REPLACER DE MATHS
         function replacer(match, p1, p2, p3, p4, p5, offset, string) {
             p3 = p3.replace(/(\r|\n)/g, " ")
@@ -77,8 +88,10 @@ fs.readdir("./tex_files/", (err, files) => {
             p3 = parenth(p3)
                 //p3 = p3.replace(/(?<!\\[a-z]*)\[/gi, "\\left[") //Genre c'est possible mdr
                 //p3 = p3.replace(/(?<!(?!\\left)\\[a-z]*\[[a-z]*)\]/gi, "\\right]") // JPP, pire arnaqueur du monde
-            p3 = p3.replace(/\[/gi, "\\left[")
-            p3 = p3.replace(/\]/gi, "\\right]")
+            if (wellparenth(p3, 0)) {
+                p3 = p3.replace(/\[/gi, "\\left[")
+                p3 = p3.replace(/\]/gi, "\\right]")
+            }
             p3 = p3.replace(/(?<!(\\o?i{1,3}nt|\\sum|\\product))_{(.[^}].*?)}/gs, "_{\\mathrm{$2}}")
             p3 = p3.replace(/(Espace)/gi, "\\mathrm{$1}")
             p3 = p3.replace(/(Gauss)/gi, "\\mathrm{$1}")
