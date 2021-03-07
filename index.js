@@ -85,6 +85,8 @@ fs.readdir("./tex_files/", (err, files) => {
             p3 = p3.replace(/(?<!\\(([a-z]|[A-Z])*|(mathcal{)))D/gm, "\\mathrm{D}")
             p3 = p3.replace(/(?<!\w)(cte|cste)/g, "\\mathrm{$1}")
             p3 = p3.replace(/\\times( |\r?\n?)\\overrightarrow/g, "\\wedge \\overrightarrow")
+            p3 = p3.replace(/<((.|\r?\n?)*?)>/gm, "\\expval{$1}")
+            p3 = p3.replace(/\\overrightarrow{(\\underline{)?j/g, "\\overrightarrow{$1\\jmath")
             if (p2 == undefined) {
                 p2 = ""
             }
