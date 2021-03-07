@@ -25,6 +25,7 @@ fs.readdir("./tex_files/", (err, files) => {
         par = par.replace(/\\noindent /g, "");
 
         par = par.replace(/\$( |\n)?\$ ?= ?\$( |(\r?\n))?\$/g, " = ")
+        par = par.replace(/\$(\n|\r| )*(\\\\)?(\n|\r| )*\$ ?=/gm, " = ")
 
         par = par.replace(/\\textbf\{(\d\d?)(\.|\)) *((.|\r?\n?)*?)\}( |(\r?\n?))?(\\\\)?/g, "\\subsection*{$1. $3}")
         par = par.replace(/\\textbf\{([a-z])(\.|\)) *((.|\r?\n?)*?)\}( |(\r?\n?))?(\\\\)?/g, "\\subsubsection*{$1) $3}")
