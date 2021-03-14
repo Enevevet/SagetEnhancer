@@ -87,3 +87,5 @@
 \DeclareMathOperator{\ch}{ch}
 \let\sh\relax
 \DeclareMathOperator{\sh}{sh}
+
+\renewcommand{\abstractname}{Introduction}
